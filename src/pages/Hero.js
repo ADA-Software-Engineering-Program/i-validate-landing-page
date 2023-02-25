@@ -17,14 +17,14 @@ const Hero = () => {
     
   return (
     <section className='row hero'>
-      <article className='col-md-6 col-sm-1 px-5 heroDetail'>
+      <article className='col-lg-6  px-5 heroDetail'>
       {herodetail.map((item) => {
         return(<Herocard key={item.id} heading={item.heading} description={item.description} />)
       })}
         <button className='btn heroBtn'>Get Started</button>
       </article>
 
-      <div className='col-md-6  col-sm-1  heroLeft'>
+      <div className='col-lg-6  heroLeft'>
         <picture className='w-50 h-md-100 h-sm-75 '>
         <img src={heroImage} alt='A Business woman' className='img responsive heroImage mt-5 position-relative' />
         </picture>

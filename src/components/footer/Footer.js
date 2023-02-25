@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='navbar-changes mx-auto'>
             <div className='footer-info d-flex justify-content-between'>
                 <div className='footer-logo'>
-                    <a href={'./'}><img src={Logo} alt='Footer Logo' /></a>
+                    <a href={'./'}><img src={Logo} alt='Footer Logo' className='headerLogo' /></a>
                 </div>
                 <div className='footer-details row'>
                     <ul className='col-5 list-unstyled ulchange'>
