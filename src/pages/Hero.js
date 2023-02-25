@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Herocard from '../components/Herocard';
-// import heroImage  from '../images/businesswoman-image.jpg';
+import heroImage  from '../images/business-woman.png';
 
 
 
@@ -26,7 +26,7 @@ const Hero = () => {
 
       <div className='col-md-6 my-5 heroLeft'>
         <picture className='w-50 h-100 position-relative '>
-        {/* <img src={heroImage} alt='A Business woman' className='img responsive heroImage' /> */}
+        <img src={heroImage} alt='A Business woman' className='img responsive heroImage mt-5' />
         </picture>
         <div className='box style={zIndex: -1}'>
         </div>
