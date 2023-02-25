@@ -107,8 +107,6 @@ code {
 }
 
 .wave {
-  /* position: absolute; */
-  /* z-index: 1; */
   width: 25%;
   height: 50%;
   margin: auto 10rem;
