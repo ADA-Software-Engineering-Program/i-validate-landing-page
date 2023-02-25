@@ -14,6 +14,7 @@ code {
   height: 550px;
   object-fit: contain;
   margin: auto 6rem;
+  z-index: 1;
 }
 
 .brandColor {
@@ -27,7 +28,7 @@ code {
 .hero {
   margin: auto 6rem;
   height: 100vh;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
 }
 
 .heroBtn {
@@ -45,8 +46,8 @@ code {
 
 .box {
   position: absolute;
-  top: 40%;
-  right: 20%;
+  top: 54%;
+  right: 17%;
   width: 201px;
   height: 102px;
   background-color: rgba(255, 204, 0, 0.5);
@@ -57,6 +58,7 @@ code {
 }
 
 .researchRight {
+  position: relative;
   background-color: rgba(41, 41, 136, 1);
   color: #fff;
   font-family: Inter;
@@ -65,6 +67,7 @@ code {
   padding: 2.5rem 0rem;
   padding-left: 3rem;
   border-radius: 25px;
+  z-index: 1;
 }
 
 .numbText {
@@ -95,18 +98,21 @@ code {
 
 .researchShadow {
   position: absolute;
+  top: 60%;
   width: 65%;
   height: 150px;
-  margin: auto 3.5rem;
+  margin: auto 2.5rem;
   border-radius: 20px;
   background-color: rgba(41, 41, 136, 0.06);
 }
 
 .wave {
+  /* position: absolute; */
+  /* z-index: 1; */
   width: 25%;
   height: 50%;
   margin: auto 10rem;
-  margin-top: 3rem;
+  margin-top: 3.4rem;
   transform: rotate(140deg);
 }
 

@@ -17,7 +17,7 @@ const Hero = () => {
     
   return (
     <section className='row hero '>
-      <article className='col-md-6 my-5 px-5 heroDetail'>
+      <article className='col-md-6  px-5 heroDetail'>
       {herodetail.map((item) => {
         return(<Herocard key={item.id} heading={item.heading} description={item.description} />)
       })}
@@ -26,9 +26,9 @@ const Hero = () => {
 
       <div className='col-md-6 my-5 heroLeft'>
         <picture className='w-50 h-100 position-relative '>
-        <img src={heroImage} alt='A Business woman' className='img responsive heroImage mt-5' />
+        <img src={heroImage} alt='A Business woman' className='img responsive heroImage mt-5 position-relative' />
         </picture>
-        <div className='box style={zIndex: -1}'>
+        <div className='box'>
         </div>
       </div>
 
