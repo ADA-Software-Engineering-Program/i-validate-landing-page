@@ -16,7 +16,7 @@ const Plan = () =>{
     
   return (
     <section className='row numberSection'>
-        <article className='col-md-6 px-5 heroDetail'>
+        <article className='col-md-6 px-5 planDetail'>
             {plandetail.map((item) => {
             return(<Plancard key={item.id} heading={item.heading} description={item.description} />)
             })}

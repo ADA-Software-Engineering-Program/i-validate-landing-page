@@ -1,12 +1,13 @@
 import React from "react";
-import './headerFooter.css'
+import './headerFooter.css';
+import Logo from '../../images/i-validate-logo-optimiz.jpg';
 
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-box">
       <div className="container-fluid navbar-changes">
         <a className="navbar-brand" href={"/"}>
-          Logo
+          <img src={Logo} alt="logo" className="headerLogo"/>
         </a>
         <button
           className="navbar-toggler"
