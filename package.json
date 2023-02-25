@@ -1,6 +1,6 @@
 {
-  "name": "i-validate",
-  "homepage": "https://ADA-Software-Engineering-Program.github.io/i-validate-landing-page",
+  "name": "i-validate-landing-page",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
