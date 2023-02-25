@@ -16,7 +16,7 @@ const Plan = () =>{
     
   return (
     <section className='row numberSection'>
-        <article className='col-md-6 px-5 heroDetail'>
+        <article className='col-lg-6 px-5 planDetail'>
             {plandetail.map((item) => {
             return(<Plancard key={item.id} heading={item.heading} description={item.description} />)
             })}
@@ -27,7 +27,7 @@ const Plan = () =>{
                 <p className='mt-2 ms-2'>Try it out if few clicks</p>
             </div>
       </article>
-      <div className='col-md-6 px-5'>
+      <div className='col-lg-6 px-5'>
         <form>
             <input type="text"  placeholder='Type idea here' /><br/>
             <input type="text"  placeholder='Choose sector' /><br/>

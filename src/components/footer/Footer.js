@@ -1,5 +1,6 @@
 import React from 'react'
 import '../header/headerFooter.css'
+import Logo from '../../images/i-validate-logo-optimiz.jpg'
 
 const Footer = () => {
   return (
@@ -7,31 +8,31 @@ const Footer = () => {
         <div className='navbar-changes mx-auto'>
             <div className='footer-info d-flex justify-content-between'>
                 <div className='footer-logo'>
-                    <a href={'./'}><img src='' alt='Footer Logo' /></a>
+                    <a href={'./'}><img src={Logo} alt='Footer Logo' className='headerLogo' /></a>
                 </div>
                 <div className='footer-details row'>
                     <ul className='col-5 list-unstyled ulchange'>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>Terms & Conditions</a></li>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>Account</a></li>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>Privacy</a></li>
-                        <li><a href={"/"} className='text-decoration-none text-dark'>Customer service</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Terms & Conditions</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Account</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Privacy</a></li>
+                        <li><a href={"/"} className='text-decoration-none text-white'>Customer service</a></li>
                     </ul>
                     <ul className='col-4 list-unstyled ulchange'>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>Guidelines</a></li>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>Blog</a></li>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>YouTube</a></li>
-                        <li><a href={"/"} className='text-decoration-none text-dark'>Subscribe</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Guidelines</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Blog</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>YouTube</a></li>
+                        <li><a href={"/"} className='text-decoration-none text-white'>Subscribe</a></li>
                     </ul>
                     <ul className='col-3 list-unstyled ulchange'>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>Guidelines</a></li>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>Blog</a></li>
-                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-dark'>YouTube</a></li>
-                        <li><a href={"/"} className='text-decoration-none text-dark'>Subscribe</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Guidelines</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Blog</a></li>
+                        <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>YouTube</a></li>
+                        <li><a href={"/"} className='text-decoration-none text-white'>Subscribe</a></li>
                     </ul>
                 </div>
             </div>
             <div className="mt-4">
-                <p className="">
+                <p className="text-white">
                 &copy; {new Date().getFullYear()} i-Validate. All right reserved.
                 </p>
             </div>

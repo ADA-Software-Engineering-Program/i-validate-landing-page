@@ -15,7 +15,7 @@ body {
 
 /* Footer */
 .footer-landing {
-    background: #F5F5F5;
+    background: rgba(41, 41, 136, 1);
     padding: 100px 0;
 }
 
@@ -25,6 +25,11 @@ body {
 
 .footer-details {
     flex-basis: 100%;
+}
+
+.headerLogo {
+    width: 50%;
+    height: auto;
 }
 
 @media (max-width: 800px) {

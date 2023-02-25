@@ -29,7 +29,7 @@ function ResearchCard() {
               <TiWaves className='wave'/>
             </div>
         </div>
-            <div className='col-lg-6 '>
+            <div className='col-lg-6 researchLeft'>
                 <div className='d-flex'>
                     {researchDetail.map((item) => (
                     <Research key={item.id} title={item.title} detail={item.detail} />
