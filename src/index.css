@@ -192,12 +192,11 @@ input ::placeholder {
     z-index: 1;
   }
   
-  .brandColor {
-    color: rgba(41, 41, 136, 1);
-  }
-  
-  .accentColor {
-    color: rgba(255, 204, 0, 1);
+  .box {
+    top: 56%;
+    right: 18%;
+    width: 180px;
+    height: 102px;
   }
   
   .hero {
