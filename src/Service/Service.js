@@ -1,7 +1,6 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';
 import './Service.css';
-import One from '../images/one.png'
 import { useState } from 'react';
 
 
