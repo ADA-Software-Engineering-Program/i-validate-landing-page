@@ -4,11 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(213, 159, 159);
-}
 .form-content {
-    margin: 3rem 0 ;
+    background-color: rgb(213, 159, 159);
+    padding: 3rem 0 ;
 }
 
 .contact-details {
