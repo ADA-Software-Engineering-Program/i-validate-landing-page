@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/contact" element={<Contact />} />
-        <Service />
+        <Route exact path="/service" element={<Service />} />
       </Routes>
     </Router>
   );
