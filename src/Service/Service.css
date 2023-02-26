@@ -1,13 +1,31 @@
-/* body {
-  background-image: linear-gradient(270deg, #ffcc00, #292988);
-  opacity: 40%;
-} */
+
 
 #card {
-  background-color: #292988;
-  opacity: 60%;
-  text-align: center;
+  background-color: rgb(152, 151, 193);
+  padding: 2.813rem;
+  height: 284px;
+  margin-bottom: 2rem;
+  border-radius: 15px;
 }
 #container {
   justify-content: center;
+}
+
+.card-box h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 2rem;
+}
+
+.card-box p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.card-box img {
+  top: 7px;
+  right: 7px;
 }
