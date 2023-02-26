@@ -6,17 +6,19 @@ import ResearchCard from './components/ResearchCard';
 import Plan from './components/Plan';
 
 import Hero from './pages/Hero';
+import Contact from './newContactPage/Contact';
 
 function App() {
   
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <Hero />
       <ResearchCard />
       <Plan/>
       <Subsection />
-      <Footer />
+      <Footer /> */}
+      <Contact />
     </div>
   );
 }

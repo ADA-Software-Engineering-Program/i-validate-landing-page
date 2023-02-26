@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(213, 159, 159);
+}
+.form-content {
+    margin: 3rem 0 ;
+}
+
+.contact-details {
+    margin-top: 4.5rem;
+   
+}
+.contact-details h1 {
+  font-family: "MadaniArabic-Medium", "inter";
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 80px;
+  color: #ffffff;
+  
+}
+
+.contact-info {
+  font-family: "Inter";
+  font-style: normal;
+  color: #292988;
+  margin-top: 60px;
+}
+
+.contact-info h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 39px;
+}
+
+.contact-info p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 24px;
+  width: 80%;
+}
+
+.contact-info {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@media (max-width: 1025px) {
+    .contact-details {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contact-details h1 {
+        font-size: 3.5rem;
+      }
+}
+@media (max-width: 725px) {
+    .contact-details h1 {
+        font-size: 3rem;
+      }
+    .form-content {
+        flex-wrap: wrap;
+    }
+    .contact-details {
+        flex-basis: 80%;
+        margin-top: 0;
+    }
+    .form-details {
+        flex-basis: 80%;
+    }
+    .contact-info {
+        margin: 1rem 0;
+    }
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+    .contact-info p {
+        width: 100%;
+    }
+}
