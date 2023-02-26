@@ -10,9 +10,9 @@
   .bg-top {
     top: -12%;
     left: -28%;
-    background:rgba(41, 41, 136, 0.9);
+    background:rgba(41, 41, 136, 0.747);
     filter: blur(150px);
-    z-index: 1;
+    z-index: -1;
   }
   
   .rightCol{
@@ -23,7 +23,7 @@
   .bg-down {
     bottom: -20%;
     right: -18%;
-    background: rgba(255, 204, 0, 0.9);
+    background: rgba(255, 204, 0, 0.71);
     filter: blur(150px);
-  
+    z-index: -1;
   }
