@@ -1,0 +1,13 @@
+/* body {
+  background-image: linear-gradient(270deg, #ffcc00, #292988);
+  opacity: 40%;
+} */
+
+#card {
+  background-color: #292988;
+  opacity: 60%;
+  text-align: center;
+}
+#container {
+  justify-content: center;
+}
