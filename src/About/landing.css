@@ -140,10 +140,6 @@ li{
     color: rgba(41, 41, 136, 1);
 }
 
-.vision {
-    margin-top: 6rem;
-    margin-left: 3.5rem;
-  }
 
 .nav-gap {
     gap: 2rem;
@@ -151,7 +147,22 @@ li{
 .leftCol {
     display: none;
 }
+.vision {
+    margin-top: 6rem;
+    margin-left:0.2rem;
+}
 
+@media screen and (min-width:725px) {
+  
+    .leftCol {
+        display: block;
+    }
+    .img-arc {
+        top: 0;
+    }
+
+
+}
 
 @media screen and (min-width:1024px) {
     .navLinkContainer {
@@ -167,16 +178,15 @@ li{
     .leftCol {
         display: block;
     }
+    
+.vision {
+    
+    margin-left: 3.5rem;
+  }
 }
 
-@media screen and (min-width:725px) {
-  
-    .leftCol {
-        display: block;
-    }
-    .img-arc {
-        top: 0;
-    }
 
-
+@media screen and (min-width: 400px){
+    
+    
 }
