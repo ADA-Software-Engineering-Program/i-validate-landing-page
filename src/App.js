@@ -8,7 +8,6 @@ import Footer from "../src/components/footer/Footer";
 import Hero from "./pages/Hero";
 
 function App() {
-  
   return (
 
     <>
