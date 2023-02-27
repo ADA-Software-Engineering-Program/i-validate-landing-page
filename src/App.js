@@ -1,36 +1,67 @@
-import React from 'react';
-import { Route, Routes,  } from 'react-router-dom';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import React from "react";
 import './App.css';
-import About from './About/About';
-import Contact from './newContactPage/Contact';
-import Service from './Service/Service';
-import Navbar from './About/Navbar';
+import { Route, Routes,  } from 'react-router-dom';
+import Header from "./components/header/Header";
+import Footer from "../src/components/footer/Footer";
+
+import Hero from "./pages/Hero";
 
 function App() {
   return (
 
     <>
-    <div className="bg-circle bg-top"></div>
-    <div className="bg-circle bg-down"></div>
-    <Navbar  />
+    <Header/>
     <Routes>
-      <Route path="/" element={<About/>}/>
-      <Route exact path="/contact" element={<Contact />} />
-     <Route exact path="/service" element={<Service />} />
+      <Route path="/" element={<Hero/>}/>
     </Routes >
+    <Footer/>
     </>
-    // <Router>
-    //   <Navbar/>
-    //   <div className="bg-circle bg-top"></div>
-    //   <div className="bg-circle bg-down"></div>
-    //   <Routes>
-    //     <Route exact path="/about" element={<About/>}/>
-    //     <Route exact path="/contact" element={<Contact />} />
-    //     <Route exact path="/service" element={<Service />} />
-    //   </Routes>
-    // </Router>
+    
+
+    
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+// // import Header from './components/header/Header';
+// // import Footer from './components/footer/Footer';import React from 'react';
+// import React, { Suspense, useState } from "react";
+// import './App.css';
+// import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+// import AppRoutes from './Router';
+// // import Navbar from './components/header/landing-header/Navlists';
+// import Navbar from "./components/header/landing-header/Navbar";
+// // import Navbar from './components/footer/landing-header/Navbar';
+// // import Subsection from './components/subsection/Subsection';
+// // import ResearchCard from './components/ResearchCard';
+// // import Plan from './components/Plan';
+
+// // import Hero from './pages/Hero';
+
+// function App() {
+
+//   const [isOpen, setIsOpen] = useState(false);
+//   // const { pathname } = useLocation();
+
+//   const handleOpen = () => setIsOpen(!isOpen);
+  
+//   return (
+//     <Router>
+//       <Navbar {...{ isOpen, handleOpen }} />
+//       <Suspense fallback={<div>Loading</div>}>
+//         <Routes>{AppRoutes({Route})}</Routes>
+//       </Suspense>
+//     </Router>
+//   );
+// }
+
+// export default App;

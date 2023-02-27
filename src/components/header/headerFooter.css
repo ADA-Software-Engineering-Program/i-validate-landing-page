@@ -1,0 +1,33 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+.navbar-box {
+    height: 100px;
+}
+
+.navbar-changes {
+    width: 90% !important;
+}
+.navbar-nav {
+    gap: 15px;
+}
+
+/* Footer */
+.footer-landing {
+    background: rgba(41, 41, 136, 1);
+    padding: 100px 0;
+}
+
+.footer-logo {
+    flex-basis: 100%;
+}
+
+.footer-details {
+    flex-basis: 100%;
+}
+
+.headerLogo {
+    width: 6rem;
+    height: 3.5rem;
+}
