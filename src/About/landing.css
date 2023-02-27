@@ -140,7 +140,6 @@ li{
     color: rgba(41, 41, 136, 1);
 }
 
-
 .nav-gap {
     gap: 2rem;
 }
@@ -160,8 +159,6 @@ li{
     .img-arc {
         top: 0;
     }
-
-
 }
 
 @media screen and (min-width:1024px) {

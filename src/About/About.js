@@ -1,8 +1,8 @@
 import React from "react";
 import landImg from "../images/business-woman.png";
 import Landherocard from "./Landherocard";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 import { BsGlobe } from "react-icons/bs";
 import Person from "../images/person.png"
 
