@@ -11,14 +11,14 @@ function App() {
   return (
 
     <>
-    <div className="bg-circle bg-top"></div>
-    <div className="bg-circle bg-down"></div>
-    <Navbar  />
-    <Routes>
-      <Route path="/" element={<About/>}/>
-      <Route exact path="/contact" element={<Contact />} />
-     <Route exact path="/service" element={<Service />} />
-    </Routes >
+      <div className="bg-circle bg-top"></div>
+      <div className="bg-circle bg-down"></div>
+      <Navbar  />
+      <Routes>
+        <Route path="/" element={<About/>}/>
+        <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/service" element={<Service />} />
+      </Routes >
     </>
     // <Router>
     //   <Navbar/>

@@ -5,8 +5,8 @@
 }
 
 .headerLogo {
-    width: 6rem;
-    height: 3.5rem;
+    width: 12rem;
+    /* height: 3rem; */
 }
 
 
@@ -19,6 +19,22 @@ li{
     border: 2px solid rgba(41, 41, 136, 1);
     border-radius: .2rem;
     color: rgba(41, 41, 136, 1);
+}
+
+.contact-text-color {
+    color: #292988;
+  }
+
+.person-img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.person-img img {
+    position: absolute;
+    right: -13px;
 }
 
 .nav-link {
@@ -121,6 +137,11 @@ li{
     margin-top: 6rem;
     margin-left: 3.5rem;
   }
+
+.nav-gap {
+    gap: 2rem;
+}
+
 
 @media screen and (min-width:1024px) {
     .navLinkContainer {

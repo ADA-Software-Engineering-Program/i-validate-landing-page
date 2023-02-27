@@ -41,7 +41,7 @@ const Service = () => {
 
   return (
     <section className="container mt-5 ml-5 mr-5 pl-5">
-      <h2 className="text-white mb-5 fw-bold"> Service </h2>
+      <h2 className="text-white mb-5 fw-bold service-title"> Service </h2>
       <div className="row">
         {List.map((item) => {
           // const { title, img, content } = item;
