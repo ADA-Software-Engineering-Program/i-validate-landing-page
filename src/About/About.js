@@ -17,12 +17,12 @@ const About = () => {
           </h1>
           <button className="btn heroBtn mt-4 text-white">Get Started</button>
         </div>
-        <div className="col-md-6 position-relative">
+        <div className="col-md-6 position-relative leftCol">
           <div className="img-arc">
             <img src={landImg} className="landImg" alt="business woman" />
           </div>
           <div className="img-arc arc-right"></div>
-          <div className="small-circle"></div>
+          <div className="small-circle small-circle-main"></div>
           <div className="small-circle circle-right"></div>
           <div className="mid-circle"></div>
         </div>
