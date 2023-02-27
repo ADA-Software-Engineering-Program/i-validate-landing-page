@@ -136,6 +136,10 @@ input ::placeholder {
   color: rgba(18, 18, 59, 1);
 }
 
+.vision {
+  padding-top: -2rem;
+  /* margin-left: -2rem; */
+}
 
 /* @media only screen and (min-width:768px){
   .hero {
@@ -268,7 +272,7 @@ input ::placeholder {
   
   .numberSection {
     margin: auto 6rem;
-    padding-top: 6rem;
+    padding-top: 10rem;
   }
   
   .researchShadow {

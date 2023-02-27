@@ -11,11 +11,11 @@ function Subsection() {
 
 const Menu = () => {
   return (
-    <div>
+    <div className='px-5 subsection'>
       <div className="background">
         <img src="" class="img-fluid" alt="..."></img>
       </div>
-      <div className="col-lg-12 mb-2" id="pattern">
+      <div className="col-lg-12 col-sm-2 mb-lg-2" id="pattern">
         <h1>
           <span className="valid">I-Validate</span> committed to providing
           entrepreneurs with the information and resources they need to make

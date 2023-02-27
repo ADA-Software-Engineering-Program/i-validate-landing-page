@@ -1,6 +1,6 @@
 import React from 'react'
 import '../header/headerFooter.css'
-import Logo from '../../images/i-validate-logo-optimiz.jpg'
+import Logo from '../../images/white logo 2.png'
 
 const Footer = () => {
   return (
