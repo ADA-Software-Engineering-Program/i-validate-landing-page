@@ -13,6 +13,12 @@ body {
     gap: 15px;
 }
 
+.nav-gap {
+    width: 64%;
+    justify-content: space-between;
+    
+}
+
 /* Footer */
 .footer-landing {
     background: rgba(41, 41, 136, 1);
@@ -31,3 +37,4 @@ body {
     width: 6rem;
     height: 3.5rem;
 }
+

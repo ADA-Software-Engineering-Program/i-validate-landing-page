@@ -10,25 +10,24 @@ code {
 }
 
 .heroImage {
-  position: absolute;
-  width: 300px;
-  height: 780px;
-  object-fit: contain;
-  top: 4%;
-  left: 0%;
-  margin: auto 3rem;
-  z-index: 1;
+  width: 50%;
+  height: auto;
+  margin: 15% auto 0% 25%;
 }
 
 .box {
   position: absolute;
-  top: 72%;
-  right: 5%;
-  width: 180px;
-  height: 102px;
+  bottom: 21%;
+  right: 27%;
+  width: 100px;
+  height: 60px;
+  z-index: -1;
   background-color: rgba(255, 204, 0, 0.5);
 }
 
+.heroDetail {
+  padding: 0rem 2rem;
+}
 
 .heroBtn {
   width: 50%;
@@ -79,10 +78,10 @@ code {
 
 .researchShadow {
   position: absolute;
-  top: 60%;
-  width: 65%;
+  top: 50%;
+  width: 78%;
   height: 150px;
-  margin: auto 1.5rem;
+  margin: auto 2rem;
   border-radius: 20px;
   background-color: rgba(41, 41, 136, 0.06);
 }
@@ -91,7 +90,7 @@ code {
   width: 25%;
   height: 50%;
   margin: auto 6rem;
-  margin-top: 3.4rem;
+  margin-top: 4.5rem;
   transform: rotate(140deg);
 }
 
@@ -113,6 +112,7 @@ input {
 
 .numberSection {
   padding-top:3rem ;
+  margin: 0rem .4rem;
 }
 
 .researchLeft {
@@ -135,6 +135,9 @@ input ::placeholder {
   font-weight: 600;
   color: rgba(18, 18, 59, 1);
 }
+
+
+
 
 
 /* @media only screen and (min-width:768px){
@@ -181,28 +184,23 @@ input ::placeholder {
 } */
 
 @media only screen and (min-width:1024px) {
-  .heroImage {
-    position: absolute;
-    width: 300px;
-    height: 680px;
-    object-fit: contain;
-    top: 19.5%;
-    left: 15%;
-    margin: auto 6rem;
-    z-index: 1;
-  }
+  
   
   .box {
-    top: 56%;
-    right: 18%;
+    position: absolute;
+    top: 31%;
+    right: 15%;
     width: 180px;
     height: 102px;
+    z-index: -1;
   }
   
+  .box1 {
+    background-color: #1c1c1c;
+  }
   .hero {
-    margin: auto 6rem;
+    justify-content: space-between;
     margin-top: -6rem;
-    height: 100vh;
   }
   
   .heroBtn {
@@ -216,7 +214,7 @@ input ::placeholder {
   
   .heroDetail {
     margin-top: 9rem;
-    padding: 7rem 0rem;
+    padding: 0rem 7rem;
   }
 
   .planDetail {
@@ -224,11 +222,10 @@ input ::placeholder {
   }
   
   .researchLeft {
-    margin-top: 0rem;
+    margin-top: -1.2rem;
   }
   
   .heroLeft {
-    /* margin-top: -13rem; */
     background-color: rgba(41, 41, 136, 0.1);
   }
   
@@ -239,7 +236,7 @@ input ::placeholder {
     font-family: Inter;
     width: 85%;
     height: 200px;
-    padding: 2.5rem 0rem;
+    padding: 2rem 0rem;
     padding-left: 3rem;
     border-radius: 25px;
     z-index: 1;
@@ -267,16 +264,16 @@ input ::placeholder {
   }
   
   .numberSection {
-    margin: auto 6rem;
+    margin: auto 4.5rem;
     padding-top: 6rem;
   }
   
   .researchShadow {
     position: absolute;
-    top: 60%;
+    top: 55%;
     width: 65%;
     height: 150px;
-    margin: auto 1.5rem;
+    margin: auto 3rem;
     border-radius: 20px;
     background-color: rgba(41, 41, 136, 0.06);
   }
@@ -285,7 +282,7 @@ input ::placeholder {
     width: 25%;
     height: 50%;
     margin: auto 10rem;
-    margin-top: 3.4rem;
+    margin-top: 4rem;
     transform: rotate(140deg);
   }
   

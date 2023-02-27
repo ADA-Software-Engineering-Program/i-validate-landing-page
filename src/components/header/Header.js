@@ -3,7 +3,7 @@ import './headerFooter.css';
 import Logo from '../../images/i-validate-logo-optimiz.jpg';
 
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+import { Nav } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 
 import { useLocation } from "react-router-dom";
@@ -28,7 +28,7 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto nav-gap">
+          <Nav className="ms-auto nav-gap ">
             <Nav.Link href={"/"}  className={splitLocation[1] === "" ? "active" : ""}>Expert View</Nav.Link>
             <Nav.Link href={"/contact"} className={splitLocation[1] === "analytics" ? "active" : ""}>Analytics</Nav.Link>
             <Nav.Link href={"/service"} className={splitLocation[1] === "blog" ? "active" : ""}>Blog</Nav.Link>

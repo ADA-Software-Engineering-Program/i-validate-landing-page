@@ -19,8 +19,8 @@ function ResearchCard() {
   ]);
 
   return (
-    <section className='row numberSection'>
-        <div className='col-lg-6 px-5 position-relative'>
+    <section className='row numberSection mt-md-3'>
+        <div className='col-lg-6  position-relative'>
             <div className='researchRight'>
                 <h4 className='numbText'>1,000+</h4>
                 <p className='fw-light'>Entrepreneurs use I-validate </p>
@@ -30,7 +30,7 @@ function ResearchCard() {
             </div>
         </div>
             <div className='col-lg-6 researchLeft'>
-                <div className='d-flex'>
+                <div className='d-md-flex'>
                     {researchDetail.map((item) => (
                     <Research key={item.id} title={item.title} detail={item.detail} />
                     ))}
