@@ -10,8 +10,7 @@
 }
 
 .contact-details {
-    margin-top: 4.5rem;
-   
+    margin-top: 4.5rem;  
 }
 .contact-details h1 {
   font-family: "MadaniArabic-Medium", "inter";
@@ -58,7 +57,7 @@
         font-size: 3.5rem;
       }
 }
-@media (max-width: 725px) {
+@media (max-width: 769px) {
     .contact-details h1 {
         font-size: 3rem;
       }

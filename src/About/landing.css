@@ -5,10 +5,9 @@
 }
 
 .headerLogo {
-    width: 6rem;
-    height: 3.5rem;
+    width: 12rem;
+    /* height: 3rem; */
 }
-
 
 li{
     color: rgba(41, 41, 136, 1);
@@ -19,6 +18,22 @@ li{
     border: 2px solid rgba(41, 41, 136, 1);
     border-radius: .2rem;
     color: rgba(41, 41, 136, 1);
+}
+
+.contact-text-color {
+    color: #292988;
+  }
+
+.person-img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.person-img img {
+    position: absolute;
+    right: -13px;
 }
 
 .nav-link {
@@ -43,6 +58,9 @@ li{
 .arc-right {
     transform: rotate(-36deg);
 }
+.leftCol {
+    position: relative;
+}
 
 .small-circle {
     position: absolute;
@@ -56,8 +74,13 @@ li{
 
 .circle-right {
     right: 17%;
-    top: 110%;
+    top: 70%;
     background-color: rgba(255, 204, 0, 1);
+}
+
+.small-circle-main {
+    left: 21%;
+    top: 5%;
 }
 
 .Lo {
@@ -67,8 +90,8 @@ li{
     position: absolute;
     width: 60px;
     height: 60px;
-    right: 61%;
-    top: 54%;
+    left: 5%;
+    top: 32%;
     border-radius: 50%;
     background-color: rgba(254, 207, 23, 0.9);
     /* filter: blur(6px); */
@@ -117,10 +140,26 @@ li{
     color: rgba(41, 41, 136, 1);
 }
 
+.nav-gap {
+    gap: 2rem;
+}
+.leftCol {
+    display: none;
+}
 .vision {
     margin-top: 6rem;
-    margin-left: 3.5rem;
-  }
+    margin-left:0.2rem;
+}
+
+@media screen and (min-width:725px) {
+  
+    .leftCol {
+        display: block;
+    }
+    .img-arc {
+        top: 0;
+    }
+}
 
 @media screen and (min-width:1024px) {
     .navLinkContainer {
@@ -133,7 +172,18 @@ li{
         justify-content: space-between;
         padding: 2rem 5rem;
     }
+    .leftCol {
+        display: block;
+    }
+    
+.vision {
+    
+    margin-left: 3.5rem;
+  }
+}
 
 
-
+@media screen and (min-width: 400px){
+    
+    
 }
