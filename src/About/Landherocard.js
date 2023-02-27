@@ -20,8 +20,8 @@ function Landherocard() {
   
     return (
       <section className='row numberSection vision'>
-              <div className='col-lg-6 researchLeft'>
-                  <div className='d-flex'>
+              <div className='col-md-6 researchLeft'>
+                  <div className='d-md-flex d-sm-grid px-md-2 px-0'>
                       {vision.map((item) => (
                       <Landhero key={item.id} title={item.title} detail={item.detail} />
                       ))}

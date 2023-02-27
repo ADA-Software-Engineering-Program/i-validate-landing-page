@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+#App {
+    overflow-x: hidden;
+}
+
 .bg-circle{
     position: fixed;
     height: 60vh;
@@ -15,11 +20,7 @@
     z-index: 1;
   }
   
-  .rightCol{
-    /* margin-left: 2px; */
-    /* padding: 6rem 3rem; */
-    z-index: 2;
-  }
+ 
   .bg-down {
     bottom: -20%;
     right: -18%;

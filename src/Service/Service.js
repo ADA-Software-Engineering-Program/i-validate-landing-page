@@ -1,25 +1,26 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';
 import './Service.css';
+// import One from '../images/research-and-development (1) 1.png'
 
 const List = [
   {
     title: 'Market Research',
-    img: 'one.png',
+    img: 'One',
     content:
       'We offer tools to conduct market research, such as competitor analysis, customer surveys, and focus groups. This information would help you understand the market demand and potential for their idea.This information would help you understand the market demand and potential for their idea',
     id: 1,
   },
   {
     title: 'Business Plan Generator',
-    img: './two.png',
+    img: 'Two',
     content:
       'We provide a step-by-step guide to create a business plan, including financial projections, marketing strategies,and a sales plan. This would help users to identify potential challenges and opportunities before investing significant resources.',
     id: 2,
   },
   {
     title: 'Expert Feedback',
-    img: './three.png',
+    img: 'Three',
     content:
       'I-Validate connect users with industry experts or perienced entrepreneurs who can offer feedback and advice on their idea. This would provide an objective perspective and help users refine their idea.',
 
@@ -27,7 +28,7 @@ const List = [
   },
   {
     title: 'Crowdfunding',
-    img: './.png',
+    img: 'Four',
     content:
       'We offer a crowdfunding platform to allow users to test their idea by raising funds for a prototype or minimum viable product. This would help users to validate market demand and attract potential investors.',
     id: 4,
@@ -36,13 +37,13 @@ const List = [
 
 const Service = () => {
   return (
-    <section className="container mt-5 ml-5 mr-5 pl-5">
+    <section className="container mt-5 ml-5 mr-5 pl-5 serviceContainer">
       <h2 className="text-white mb-5 fw-bold"> Service</h2>
       <div className="row">
         {List.map((item) => {
           // const { title, img, content } = item;
 
-          return <Serve {...item} key={item.id} />;
+          return <Serve {...item} key={item.id} img={item.img} />;
         })}
       </div>
     </section>
@@ -62,7 +63,7 @@ const Serve = (props) => {
             className="position-absolute top-0 end-0"
           />
         </span>
-        <p className="fs-6 text-dark fw-bolder">{content}</p>
+        <p className="fs-6 fw-bolder serviceCard">{content}</p>
       </div>
     </div>
   );

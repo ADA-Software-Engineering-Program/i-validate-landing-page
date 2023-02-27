@@ -7,7 +7,19 @@
   background-color: #292988;
   opacity: 60%;
   text-align: center;
+  padding: 3rem;
+  z-index: 1;
 }
 #container {
   justify-content: center;
+}
+
+.serviceContainer {
+  position: absolute;
+  margin: auto 5rem;
+  z-index: 1;
+}
+
+.serviceCard {
+  color: rgba(0, 0, 0, 1);
 }

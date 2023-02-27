@@ -29,8 +29,8 @@ li{
     position: absolute;
     width: 400px;
     height:400px;
-    top: 25%;
-    right: 18%;
+    top: 38%;
+    right: -1%;
     border-left: .6rem solid rgba(41, 41, 136, 1);
     border-bottom: .6rem solid rgba(41, 41, 136, 1);
     border-radius: 50% 50% 50% 50%;
@@ -48,15 +48,15 @@ li{
     position: absolute;
     width: 35px;
     height: 35px;
-    right: 54%;
-    top: 32%;
+    right: 67%;
+    top: 77%;
     border-radius: 50%;
     background-color: rgba(41, 41, 136, 1);
 }
 
 .circle-right {
     right: 17%;
-    top: 110%;
+    top: 100%;
     background-color: rgba(255, 204, 0, 1);
 }
 
@@ -67,11 +67,12 @@ li{
     position: absolute;
     width: 60px;
     height: 60px;
-    right: 61%;
-    top: 54%;
+    right: 68%;
+    top: -62%;
     border-radius: 50%;
     background-color: rgba(254, 207, 23, 0.9);
     /* filter: blur(6px); */
+    
 }
 
 .landImg {
@@ -97,29 +98,61 @@ li{
     margin:auto 5rem ;
     margin-top: 3rem;
   }
-/* .title {
-    font-size: 48px;
-     font-weight: 600;
-     color: rgba(18, 18, 59, 1);
-   }
-   
-   .subTitle {
-     font-size: 26px;
-     font-weight: 600;
-     color: rgba(18, 18, 59, 1);
-   } */
+
 
 .Landtitle{
     font-size: 1.5rem;
     color: rgba(41, 41, 136, 1);
+    font-weight: 600;
+    width: 30%;
 }
 .Landdetail{
     color: rgba(41, 41, 136, 1);
 }
 
 .vision {
-    margin-top: 6rem;
-    margin-left: 3.5rem;
+    margin-top: 26rem;
+    margin-left: 0rem;
+  }
+
+  .chatbot {
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+  }
+
+  .rightCol{
+    /* margin-left: 2px; */
+    padding: 0rem;
+    z-index: 2;
+  }
+
+  .homemain {
+    overflow: hidden;
+  }
+
+  .i-link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    margin-top: 14rem;
+    margin: auto 6rem;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .iLink {
+    color: rgba(41, 41, 136, 1);
+   font-weight: 500;
+  }
+
+  .chatHome{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-top: .2rem;
+    margin-right: 12rem;
   }
 
 @media screen and (min-width:1024px) {
@@ -134,6 +167,49 @@ li{
         padding: 2rem 5rem;
     }
 
+    .i-link {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        justify-content: space-between;
+        margin-top: 4rem;
+        margin: auto 5rem;
+        z-index: 1;
+        overflow: hidden;
+      }
 
+      .vision {
+        margin-top: 6rem;
+        margin-left: 3.5rem;
+      }
 
+      .rightCol{
+        /* margin-left: 2px; */
+        /* padding: 6rem 3rem; */
+        z-index: 2;
+      }
+
+      .img-arc{
+        width: 400px;
+        height:400px;
+        top: 25%;
+        right: 18%;
+      }
+
+      .mid-circle {
+        width: 60px;
+        height: 60px;
+        right: 61%;
+        top: 54%;
+      }
+
+      .small-circle{
+        right: 54%;
+        top: 32%;
+      }
+
+      .circle-right{
+        right: 17%;
+        top: 110%;
+      }
 }
