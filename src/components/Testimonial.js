@@ -29,7 +29,7 @@ function Testimonial() {
       ]);
 
   return (
-    <div className='row'>
+    <div className='row bgTest p-5'>
         <div className='col-lg-6'>
             {testify.map((item) => (
                     <Testifycard key={item.id} profilePic={item.profilePic} title={item.title} detail={item.detail} />
@@ -37,7 +37,7 @@ function Testimonial() {
         </div>
         <div className='col-lg-6'>
             <div>
-                <h5>It was a great Experience!</h5>
+                <h5 className='fw-bolder'>It was a great Experience!</h5>
                 <div className='d-flex star'>
                     < AiFillStar/>
                     < AiFillStar/>

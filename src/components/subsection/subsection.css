@@ -1,9 +1,16 @@
 .pattern {
-  margin: 8rem 0rem;
+  margin: auto 3rem;
+  margin-top: 6rem;
 }
+
 #pattern {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.subImg {
+  margin: auto 3rem;
+  margin-top: 6rem;
 }
 
 .subsection{
@@ -23,6 +30,8 @@
 
 .textBrand {
   justify-content: space-evenly;
+  margin: auto 3rem;
+  margin-top: 2rem;
 }
 
 .star {
@@ -36,12 +45,12 @@
     font-weight: 500;
     color: rgba(18, 18, 59, 1);
   }
-  .subsection{
+  /* .subsection{
     margin: auto 4rem;
-  }
+  } */
   
   .background {
-    background-color: grey;
+    margin: auto 4rem;
     margin-bottom: 3rem;
   }
   

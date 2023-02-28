@@ -22,7 +22,7 @@ function Subsection() {
 
 const Menu = () => {
   return (
-    <div className='px-lg-5 subsection my-5'>
+    <div className='subsection my-5'>
       <div className="background h-50">
         <Video />
       </div>
@@ -59,7 +59,7 @@ const Menu = () => {
       </div>
       </div>
       
-      <div className="row">
+      <div className="row subImg">
         <div className="priority col-md-6">
           <img src={SubImg} alt="An  awarness event" className='img-responsive'/>
         </div>

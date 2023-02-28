@@ -27,7 +27,7 @@ const Hero = () => {
         {herodetail.map((item) => {
           return(<Herocard key={item.id} heading={item.heading} description={item.description} />)
         })}
-          <button className='btn heroBtn'>Get Started</button>
+          <a href='.' className='btn heroBtn'>Get Started</a>
         </article>
 
         <div className='col-lg-6 mt-lg-0 mt-3 me-lg-0 heroLeft'>

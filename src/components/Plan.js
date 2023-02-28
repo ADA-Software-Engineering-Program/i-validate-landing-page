@@ -31,7 +31,7 @@ const Plan = () =>{
         <form className='planForm'>
             <input type="text"  placeholder='Type idea here' className='planInput' /><br/>
             <input type="text"  placeholder='Choose sector' className='planInput'  /><br/>
-            <button className='btn heroBtn heroBtn2'>Generate</button>
+            <a href='.' className='btn heroBtn heroBtn2'>Generate</a>
         </form>
       </div>
     </section>

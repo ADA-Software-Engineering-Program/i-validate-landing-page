@@ -3,6 +3,7 @@ body {
   font-family: MadaniArabic, 'Inter', 'Helvetica';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -34,8 +35,15 @@ code {
   height: 60px;
   font-family: Inter;
   font-size: 1rem;
+  padding-top: 1.2rem;
   color: #fff;
   background-color: rgba(41, 41, 136, 1);
+}
+
+.heroBtn:hover {
+  background-color: #fff;
+  color: rgba(41, 41, 136, 1);
+  font-size: 1.5rem;
 }
 
 .heroLeft {
@@ -59,6 +67,7 @@ code {
   background-color: rgba(255, 204, 0, 1);
   width: 100%;
   height: 50px;
+  padding-top: .8rem;
   color: #1c1c1c;
   margin-top: .4rem;
 }
@@ -136,6 +145,23 @@ code {
   color: rgba(18, 18, 59, 1);
 }
 
+.bgTest {
+  background-color: rgba(41, 41, 136, 0.04);
+}
+
+.testifyCard {
+  width: 75%;
+  margin: auto;
+  margin-top: .6rem;
+  padding: .8rem;
+  border-radius: .2rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.testifyCard :hover {
+  box-shadow: .3rem rgba(37, 37, 217, 0.09);
+}
 
 
 
@@ -202,16 +228,7 @@ code {
     justify-content: space-between;
     margin-top: -6rem;
   }
-  
-  .heroBtn {
-    width: 50%;
-    height: 60px;
-    font-family: Inter;
-    font-size: 1rem;
-    color: #fff;
-    background-color: rgba(41, 41, 136, 1);
-  }
-  
+
   .heroDetail {
     margin-top: 9rem;
     padding: 0rem 7rem;
@@ -255,14 +272,6 @@ code {
     background-color: rgba(255, 204, 0, 1);
   }
   
-  .heroBtn2 {
-    background-color: rgba(255, 204, 0, 1);
-    width: 100%;
-    height: 50px;
-    color: #1c1c1c;
-    margin-top: .4rem;
-  }
-  
   .numberSection {
     margin: auto 4.5rem;
     padding-top: 6rem;
@@ -304,7 +313,7 @@ code {
   
   
   .title {
-   font-size: 48px;
+   font-size: 47px;
     font-weight: 600;
     color: rgba(18, 18, 59, 1);
   }
