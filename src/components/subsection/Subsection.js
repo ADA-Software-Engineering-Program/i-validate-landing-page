@@ -1,7 +1,14 @@
 import React from 'react';
 import './subsection.css';
+import Video from './Video'
 import SubImg from '../../images/Rectangle 17.png';
 import SubImgs from '../../images/Rectangle 18.png';
+import Brand1 from '../../images/Teelims.png';
+import Brand2 from '../../images/mafiz.png';
+import Brand3 from '../../images/Rytworth.png';
+import Brand4 from '../../images/I-mata.png';
+import Brand5 from '../../images/ASI.png';
+import Testimonial from '../Testimonial';
 
 function Subsection() {
   return (
@@ -11,17 +18,16 @@ function Subsection() {
   );
 }
 
+
+
 const Menu = () => {
   return (
-    <div className='px-lg-5 subsection'>
-      <div className="background">
-        <video>
-        <source src="../../images/WhatsApp Video 2023-02-27 at 9.44.47 PM.mp4" type="video/mp4"/>
-          Sorry, your browser doesn't support videos.
-        </video>
+    <div className='px-lg-5 subsection my-5'>
+      <div className="background h-50">
+        <Video />
       </div>
-      <div className='row'>
-      <div className="col-lg-6 mb-lg-2" >
+      <div className='row pattern'>
+      <div className="col-lg-6" >
           <h1 id="pattern">
             <span className="valid">I-Validate</span> committed to providing
             entrepreneurs with the information and resources they need to make
@@ -29,7 +35,7 @@ const Menu = () => {
           </h1>
       </div>
       <div className='col-lg-6'>
-        <div className='row'>
+        <div className='row py-3'>
           <p className='col-md-6'>
               We are proud to offer a platform that supports entrepreneurs at every
               stage of their journey, from idea generation to market entry and
@@ -40,12 +46,12 @@ const Menu = () => {
               entrepreneur, and that every idea has the potential to change the
               world.
             </p>
-            <p className='col-md-6'>
+            <p className='col-md-6 my-3'>
               Whether you're looking to test a new product, validate a business model, 
               or raise funds for a prototype, the Idea Validator App can help. 
               Join us on our mission to empower entrepreneurs and transform the world through innovation.
             </p>
-            <p className='col-md-6'>
+            <p className='col-md-6 my-3'>
               We are committed to providing entrepreneurs with the information 
               and resources they need to make informed decisions and bring their ideas to life.
             </p>
@@ -62,7 +68,18 @@ const Menu = () => {
         </div>
       </div>
       <div className="text">
+        <h5>Testimonial</h5>
+      </div>
+      <Testimonial />
+      <div className="text">
         <h5>Trusted by these brands</h5>
+        <div className='d-md-inline-flex textBrand'>
+          <img src={Brand1} alt="Trusted brands" className='brand'/>
+          <img src={Brand2} alt="Trusted brands" className='brand'/>
+          <img src={Brand3} alt="Trusted brands" className='brand'/>
+          <img src={Brand4} alt="Trusted brands" className='brand'/>
+          <img src={Brand5} alt="Trusted brands" className='brand'/>
+        </div>
       </div>
       {/* <div className="trust"></div> */}
     </div>

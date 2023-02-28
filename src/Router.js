@@ -1,9 +1,9 @@
 import React, { lazy } from "react";
 
-const Expert = lazy(() => import("./pages/Expert"));
+const Home = lazy(() => import("./pages/Home"));
+const Aboutus= lazy(() => import("./pages/Aboutus"));
+const Contact= lazy(() => import("./pages/Contact"));
 const Analytics= lazy(() => import("./pages/Analytics"));
-const Blog= lazy(() => import("./pages/Blog"));
-const Signup= lazy(() => import("./pages/Signup"));
 const Login= lazy(() => import("./pages/Login"));
 
 
@@ -12,19 +12,19 @@ const Login= lazy(() => import("./pages/Login"));
 const AppRoutes = [
     {
       path: "/",
-      element: <Expert />,
+      element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <Aboutus />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
     },
     {
       path: "/analytics",
       element: <Analytics />,
-    },
-    {
-      path: "/signup",
-      element: <Signup />,
-    },
-    {
-      path: "/blog",
-      element: <Blog />,
     },
     {
       path: "/Login",
