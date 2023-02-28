@@ -1,4 +1,6 @@
-
+.pattern {
+  margin: 8rem 0rem;
+}
 #pattern {
   font-size: 1.5rem;
   font-weight: 500;
@@ -14,13 +16,28 @@
   padding: 0px;
 }
 
+.brand {
+  width: 8%;
+  margin: auto 1.5rem;
+}
+
+.textBrand {
+  justify-content: space-evenly;
+}
+
+.star {
+  color: rgba(255, 204, 0, 0.9);
+}
+
 @media only screen and (min-width:1024px) {
   #pattern {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-family: Inter;
     font-weight: 500;
+    color: rgba(18, 18, 59, 1);
   }
   .subsection{
-    margin: auto 5rem;
+    margin: auto 4rem;
   }
   
   .background {
@@ -37,8 +54,15 @@
   } */
   .text {
     text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 7rem;
+    margin: 5rem 0rem;
+    
+  }
+
+  .text > h5 {
+    font-size: 1.6rem;
+    font-family: Inter;
+    font-weight: 600;
+    color: rgba(18, 18, 59, 1);
   }
   .cap {
     display: flex;
@@ -53,7 +77,7 @@
   
   .valid {
     background-color: rgba(255, 204, 0, 0.9);
-    color: black;
+    color: rgba(18, 18, 59, 1);
     padding: 4px;
   }
 }

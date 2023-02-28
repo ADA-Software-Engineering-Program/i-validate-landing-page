@@ -28,9 +28,9 @@ const Plan = () =>{
             </div>
       </article>
       <div className='col-lg-6 px-md-5'>
-        <form>
-            <input type="text"  placeholder='Type idea here' /><br/>
-            <input type="text"  placeholder='Choose sector' /><br/>
+        <form className='planForm'>
+            <input type="text"  placeholder='Type idea here' className='planInput' /><br/>
+            <input type="text"  placeholder='Choose sector' className='planInput'  /><br/>
             <button className='btn heroBtn heroBtn2'>Generate</button>
         </form>
       </div>
