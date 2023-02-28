@@ -30,10 +30,11 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto nav-gap ">
             <Nav.Link href={"/"}  className={splitLocation[1] === "" ? "active" : ""}>Home</Nav.Link>
-            <Nav.Link href={"/contact"} className={splitLocation[1] === "analytics" ? "active" : ""}>About Us</Nav.Link>
-            <Nav.Link href={"/service"} className={splitLocation[1] === "blog" ? "active" : ""}>Contact Us</Nav.Link>
-            <Nav.Link href={"/service"} className={splitLocation[1] === "sign up" ? "active" : ""}>Analytics</Nav.Link>
-            <Nav.Link href={"/service"} className={splitLocation[1] === "log in" ? "active" : ""}>Log In</Nav.Link>
+            <Nav.Link href={"#about"} className={splitLocation[1] === "about" ? "active" : ""}>About Us</Nav.Link>
+            <Nav.Link href={"#contact"} className={splitLocation[1] === "contact" ? "active" : ""}>Contact Us</Nav.Link>
+            <Nav.Link href={"#analytics"} className={splitLocation[1] === "analytics" ? "active" : ""}>Analytics</Nav.Link>
+            <Nav.Link href={"./SignUp"} className={splitLocation[1] === "sign up" ? "active" : ""}>Sign Up</Nav.Link>
+            <Nav.Link href={"./Login"} className={splitLocation[1] === "log in" ? "active" : ""}>Log In</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

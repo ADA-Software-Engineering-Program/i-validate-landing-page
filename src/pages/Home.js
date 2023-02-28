@@ -5,6 +5,7 @@ import heroImage  from '../images/business-woman.png';
 import ResearchCard from '../components/ResearchCard';
 import Plan from '../components/Plan';
 import Subsection from '../components/subsection/Subsection';
+import AppLayout from '../layout/AppLayout';
 
 
 
@@ -19,6 +20,7 @@ const Hero = () => {
   ])
     
   return (
+    <AppLayout>
     <main>
       <section className='row hero'>
         <article className='col-lg-5 heroDetail'>
@@ -42,6 +44,7 @@ const Hero = () => {
     <Plan />
     <Subsection />
     </main>
+    </AppLayout>
   )
 }
 
