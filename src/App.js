@@ -1,36 +1,26 @@
-
-import React from "react";
+import React from 'react';
 import './App.css';
-import { Route, Routes,  } from 'react-router-dom';
-import Header from "./components/header/Header";
-import Footer from "../src/components/footer/Footer";
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/header/Header';
+import Footer from '../src/components/footer/Footer';
+import Login from './Login/Login';
 
-import Hero from "./pages/Hero";
+// import Hero from './pages/Hero';
 
 function App() {
   return (
-
     <>
-    <Header/>
-    <Routes>
-      <Route path="/" element={<Hero/>}/>
-    </Routes >
-    <Footer/>
+      <Header />
+      <Routes>
+        {/* <Route path="/" element={<Hero />} /> */}
+        <Route path="/" element={<Login />} />
+      </Routes>
+      <Footer />
     </>
-    
-
-    
   );
 }
 
 export default App;
-
-
-
-
-
-
-
 
 // // import Header from './components/header/Header';
 // // import Footer from './components/footer/Footer';import React from 'react';
@@ -53,7 +43,7 @@ export default App;
 //   // const { pathname } = useLocation();
 
 //   const handleOpen = () => setIsOpen(!isOpen);
-  
+
 //   return (
 //     <Router>
 //       <Navbar {...{ isOpen, handleOpen }} />
