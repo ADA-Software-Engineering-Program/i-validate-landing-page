@@ -28,9 +28,9 @@ export default function SignupForm() {
       <main className="signup-main-form">
           <form
             onSubmit={handleSubmit}
-            className="signup-main"
+            className="signup-main mt-5"
           >
-            <div className="signup-header">
+            <div className="signup-header mt-4">
 
                 <div className="signup-logo">
                     <img src={Logo} alt='Logo' />
@@ -88,9 +88,9 @@ export default function SignupForm() {
             <div className="signup-alt d-flex">
                 <span>Create account with  </span>
                 <div className="icons-group d-flex">
-                    <CiFacebook className="icons-main"/>
-                    <FcGoogle className="icons-main"/>
-                    <FaLinkedinIn className="icons-main"/>
+                <Link to='#'><CiFacebook className="icons-main"/></Link>
+                <Link to='#'><FcGoogle className="icons-main"/></Link>
+                <Link to='#'><FaLinkedinIn className="icons-main"/></Link>
                 </div>
             </div>
                 <div className='signin-option d-flex align-items-center mt-3 show'>
