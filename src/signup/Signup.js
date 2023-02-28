@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import SignupForm from './SignupForm'
 import Bub from '../images/bub.png'
 import './signup.css'
-import AppLayout from '../layout/AppLayout';
 
 const Signup = () => {
   return (
-    <AppLayout>
     <div className='main-signup'>
       <SignupForm />
       <div className='color-side'>
@@ -27,7 +25,6 @@ const Signup = () => {
         </div>
       </div>
     </div>
-    </AppLayout>
   )
 }
 
