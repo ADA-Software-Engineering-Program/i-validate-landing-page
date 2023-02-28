@@ -22,7 +22,7 @@ function Subsection() {
 
 const Menu = () => {
   return (
-    <div className='subsection my-5'>
+    <div className='subsection my-md-5'>
       <div className="background h-50">
         <Video />
       </div>
@@ -60,19 +60,19 @@ const Menu = () => {
       </div>
       
       <div className="row subImg">
-        <div className="priority col-md-6">
+        <div className=" col-md-6  ">
           <img src={SubImg} alt="An  awarness event" className='img-responsive'/>
         </div>
-        <div className="priority col-md-6">
+        <div className=" col-md-6 mt-md-0 mt-2 ">
           <img src={SubImgs} alt="An  awarness event" className='img-responsive'/>
         </div>
       </div>
       <div className="text">
-        <h5>Testimonial</h5>
+        <h5 className='fw-bolder'>Testimonial</h5>
       </div>
       <Testimonial />
       <div className="text">
-        <h5>Trusted by these brands</h5>
+        <h5 className='fw-bolder'>Trusted by these brands</h5>
         <div className='d-md-inline-flex textBrand'>
           <img src={Brand1} alt="Trusted brands" className='brand'/>
           <img src={Brand2} alt="Trusted brands" className='brand'/>
@@ -81,7 +81,7 @@ const Menu = () => {
           <img src={Brand5} alt="Trusted brands" className='brand'/>
         </div>
       </div>
-      {/* <div className="trust"></div> */}
+      
     </div>
   );
 };

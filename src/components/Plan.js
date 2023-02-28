@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import Plancard from '../components/Plancard';
+import { Link } from 'react-router-dom';
 
 const Plan = () =>{
     const [plandetail] =useState([
@@ -31,7 +32,7 @@ const Plan = () =>{
         <form className='planForm'>
             <input type="text"  placeholder='Type idea here' className='planInput' /><br/>
             <input type="text"  placeholder='Choose sector' className='planInput'  /><br/>
-            <a href='.' className='btn heroBtn heroBtn2'>Generate</a>
+            <Link to='.' className='btn heroBtn heroBtn2'>Generate</Link>
         </form>
       </div>
     </section>

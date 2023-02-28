@@ -6,6 +6,7 @@ import ResearchCard from '../components/ResearchCard';
 import Plan from '../components/Plan';
 import Subsection from '../components/subsection/Subsection';
 import AppLayout from '../layout/AppLayout';
+import { Link } from 'react-router-dom';
 
 
 
@@ -29,7 +30,7 @@ const Hero = () => {
         {herodetail.map((item) => {
           return(<Herocard key={item.id} heading={item.heading} description={item.description} />)
         })}
-          <a href='.' className='btn heroBtn'>Get Started</a>
+          <Link to='../Form/Form.js' className='btn heroBtn'>Get Started</Link>
         </article>
 
         <div className='col-lg-6 mt-lg-0 mt-3 me-lg-0 heroLeft'>

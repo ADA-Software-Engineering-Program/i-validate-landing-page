@@ -3,7 +3,7 @@ import React from 'react'
 
 const Testifycard=({profilePic, title, detail}) => {
   return (
-    <div className=' d-flex testifyCard '>
+    <div className=' d-flex testifyCard p-auto '>
         <div>
                 <img className="img-responsive profilePics" 
                 src={profilePic} 
