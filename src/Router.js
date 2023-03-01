@@ -5,6 +5,7 @@ const Aboutus= lazy(() => import("./pages/Aboutus"));
 const Contact= lazy(() => import("./pages/Contact"));
 const Analytics= lazy(() => import("./pages/Analytics"));
 const Login= lazy(() => import("./pages/Login"));
+const Dashboard= lazy(() => import("./pages/Dashboard/Dashboard"));
 
 
 
@@ -29,6 +30,10 @@ const AppRoutes = [
     {
       path: "/Login",
       element: <Login />,
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />,
     },
     
     {

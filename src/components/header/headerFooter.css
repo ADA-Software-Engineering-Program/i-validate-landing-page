@@ -19,6 +19,12 @@ body {
     
 }
 
+.active {
+    background-color: rgba(41, 41, 136, 1);
+    color: #fff !important;
+    border-radius: 4px;
+}
+
 /* Footer */
 .footer-landing {
     background: rgba(41, 41, 136, 1);

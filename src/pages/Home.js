@@ -1,6 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
-import Herocard from '../components/Herocard';
 import heroImage  from '../images/business-woman.png';
 import ResearchCard from '../components/ResearchCard';
 import Plan from '../components/Plan';
@@ -11,25 +9,17 @@ import { Link } from 'react-router-dom';
 
 
 const Hero = () => {
-  const [herodetail] =useState([
-    {
-      id: 1,
-      heading: "Bring your refined innovative ideas to market.",
-      description: "I-validate provide a screening process for new business ideas, to answer a series of questions to determine if their idea has potential."
-    }
-    
-  ])
     
   return (
     <AppLayout>
     <main>
       <section className='row hero'>
         <article className='col-lg-5 heroDetail'>
-        <div className='box1'>
-          </div>
-        {herodetail.map((item) => {
-          return(<Herocard key={item.id} heading={item.heading} description={item.description} />)
-        })}
+          <h1 className='title'>Bring your <span className='titleSpan'>refined</span> innovative ideas to market.</h1>
+          <p className='my-4'>
+          I-validate provide a screening process for new business ideas, to answer a series of questions to determine if their idea has potential.
+          </p>
+        
           <Link to='../Form/Form.js' className='btn heroBtn'>Get Started</Link>
         </article>
 
