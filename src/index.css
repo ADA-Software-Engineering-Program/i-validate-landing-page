@@ -40,8 +40,12 @@ code {
   background-color: rgba(41, 41, 136, 1);
 }
 
+.titleSpan {
+  background-color: rgba(255, 204, 0, 1);
+}
+
 .heroBtn:hover {
-  background-color: #fff;
+  background: #fff !important;
   color: rgba(41, 41, 136, 1);
   font-size: 1.5rem;
 }
@@ -70,6 +74,11 @@ code {
   padding-top: .8rem;
   color: #1c1c1c;
   margin-top: .4rem;
+}
+
+.heroBtn2:hover {
+  background-color: rgb(32, 175, 32) !important;
+  color: rgba(255, 204, 0, 1);
 }
 
 .researchRight {
@@ -155,14 +164,19 @@ code {
   margin-top: .6rem;
   padding: .8rem;
   border-radius: .2rem;
+  box-shadow: .4rem .4rem .5rem rgba(37, 37, 217, 0.09), -.4rem -.4rem .5rem rgba(37, 37, 217, 0.09);
   background-color: #fff;
   cursor: pointer;
 }
 
-.testifyCard :hover {
-  box-shadow: .3rem rgba(37, 37, 217, 0.09);
+
+.profilePics {
+  width: 40%;
 }
 
+.proDetail {
+  font-size: .8rem;
+}
 
 
 
@@ -241,6 +255,18 @@ code {
   .researchLeft {
     margin-top: .2rem;
   }
+
+.testifyCard {
+  width: 65%;
+  margin: auto;
+  margin-top: .6rem;
+  padding: 1rem;
+}
+
+  .profilePics {
+    width: 20%;
+  }
+
   
   .heroLeft {
     background-color: rgba(41, 41, 136, 0.1);
@@ -320,6 +346,12 @@ code {
   
   .subTitle {
     font-size: 26px;
+    font-weight: 600;
+    color: rgba(18, 18, 59, 1);
+  }
+
+  .proTitle {
+    /* font-size: 26px; */
     font-weight: 600;
     color: rgba(18, 18, 59, 1);
   }

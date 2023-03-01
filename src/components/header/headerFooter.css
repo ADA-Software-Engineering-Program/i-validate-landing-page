@@ -2,9 +2,10 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-.navbar-main {
+/* .navbar-main {
   height: 8rem;
-}
+  background-color: transparent;
+} */
 
 .navbar-box {
   height: 100px;
@@ -22,7 +23,7 @@ body {
 }
 
 .nav-gap {
-  width: 50%;
+  width: 70%;
   justify-content: space-between;
 }
 .nav-link {
@@ -38,6 +39,12 @@ body {
     border-radius: 5px;
     padding: 0.6rem 1rem;
 }
+
+/* .active {
+    background-color: rgba(41, 41, 136, 1);
+    color: #fff !important;
+    border-radius: 4px;
+} */
 
 /* Footer */
 .footer-landing {

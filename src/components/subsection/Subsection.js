@@ -60,11 +60,11 @@ const Menu = () => {
       </div>
       
       <div className="row subImg">
-        <div className=" col-md-6  ">
-          <img src={SubImg} alt="An  awarness event" className='img-responsive'/>
+        <div className=" col-lg-6  ">
+          <img src={SubImg} alt="An  awarness event" className='img-responsive eventImg'/>
         </div>
-        <div className=" col-md-6 mt-md-0 mt-2 ">
-          <img src={SubImgs} alt="An  awarness event" className='img-responsive'/>
+        <div className=" col-lg-6 mt-lg-0 mt-2 ">
+          <img src={SubImgs} alt="An  awarness event" className='img-responsive eventImg'/>
         </div>
       </div>
       <div className="text">
@@ -73,7 +73,7 @@ const Menu = () => {
       <Testimonial />
       <div className="text">
         <h5 className='fw-bolder'>Trusted by these brands</h5>
-        <div className='d-md-inline-flex textBrand'>
+        <div className='d-lg-inline-flex textBrand'>
           <img src={Brand1} alt="Trusted brands" className='brand'/>
           <img src={Brand2} alt="Trusted brands" className='brand'/>
           <img src={Brand3} alt="Trusted brands" className='brand'/>

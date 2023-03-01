@@ -2,26 +2,29 @@ import React from 'react';
 import { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import Testifycard from './Testifycard';
+import Ade from '../images/Ade.png';
+import Obi from '../images/Obinna.png';
+import Ani from '../images/Ifunaya.png'
 
 function Testimonial() {
     const [testify] = useState([
         {
           id: 1,
-          profilePic: "../../src/images/Ade.png",
+          profilePic: Ade,
           title: 'Adekunle Adejoro',
           detail:
             'Sales Manager Capro',
         },
         {
           id: 2,
-          profilePic: "../../src/images/Obinna.png",
+          profilePic: Obi,
           title: 'Obinna Eze',
           detail:
             'Secretary Benson Enterprise',
         },
         {
           id: 3,
-          profilePic: "../../src/images/Ifunaya.png",
+          profilePic: Ani,
           title: 'Ifunaya Ani',
           detail:
             'Team Lead Rose chops',
