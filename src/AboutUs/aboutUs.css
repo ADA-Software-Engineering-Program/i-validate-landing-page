@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-container {
+  font-style: normal;
+  margin: 12rem 0 5rem;
+}
+
+.aboutUs-title h1 {
+    width: 80%;
+  font-weight: 400;
+  font-size: 4.688rem;
+  line-height: 80px;
+  color: #12123b;
+  margin: 1rem 0;
+}
+
+.aboutUs-title p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 29px;
+  color: #000000;
+}
+
+.image-box {
+  margin: 5.625rem 0;
+}
+
+.image-box img {
+    width: 100%;
+}
+
+.about-team {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-team h2 {
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 96px;
+  color: #12123b;
+}
+
+.about-team p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 29px;
+  color: #000000;
+}
+
+.about-insight {
+    margin-top: 5.625rem;
+}
+
+.about-insight h2 {
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 40px;
+  color: #12123b;
+  margin-bottom: 2rem;
+}
+
+.about-insight p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 40px;
+  text-align: justify;
+  color: #252525;
+}
+/* ================== */
+
+.about-card-main {
+  background: #ffffff;
+  box-shadow: 0px 8px 12px rgba(41, 41, 136, 0.15),
+    0px 0px 1px rgba(41, 41, 136, 0.31);
+  border-radius: 10px 10px 30px 30px;
+  height: 17.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-card-main img {
+    margin-top: 1.5rem;
+}
+
+.about-card-details {
+  font-size: 1rem;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.about-card-details h2 {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 19px;
+}
+
+.about-card-details h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 19px;
+}
+
+.about-card-details p {
+  font-weight: 500;
+  font-size: 0.813rem;
+  line-height: 16px;
+  color: #292988;
+}
+
+@media (max-width: 756px){
+    .aboutUs-title h1 {
+        width: 100%;
+        font-size: 4rem;
+    }
+}

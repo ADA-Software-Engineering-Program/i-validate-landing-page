@@ -6,24 +6,25 @@ const Footer = () => {
   return (
     <footer className='footer-landing'>
         <div className='navbar-changes mx-auto'>
-            <div className='footer-info d-flex justify-content-between'>
-                <div className='footer-logo'>
+            <div className='footer-info '>
+            <div className='footer-details row'>
+                <div className='footer-logo col-md-5 col-sm-6 ulchange'>
                     <a href={'./'}><img src={Logo} alt='Footer Logo' className='headerLogo' /></a>
                 </div>
-                <div className='footer-details row'>
-                    <ul className='col-md-5 list-unstyled ulchange'>
+                
+                    <ul className='col-md-3 col-sm-6 list-unstyled ulchange'>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Terms & Conditions</a></li>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Account</a></li>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Privacy</a></li>
                         <li><a href={"/"} className='text-decoration-none text-white'>Customer service</a></li>
                     </ul>
-                    <ul className='col-md-4 list-unstyled ulchange'>
+                    <ul className='col-md-2 col-sm-6 list-unstyled ulchange'>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Guidelines</a></li>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Blog</a></li>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>YouTube</a></li>
                         <li><a href={"/"} className='text-decoration-none text-white'>Subscribe</a></li>
                     </ul>
-                    <ul className='col-md-3 list-unstyled ulchange'>
+                    <ul className='col-md-2 col-sm-6 list-unstyled ulchange'>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Guidelines</a></li>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>Blog</a></li>
                         <li className='mb-3'><a href={"/"} className='text-decoration-none text-white'>YouTube</a></li>
