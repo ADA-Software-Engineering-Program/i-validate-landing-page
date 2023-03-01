@@ -1,25 +1,38 @@
 {
   "files": {
-    "main.css": "./static/css/main.de3339ce.css",
-    "main.js": "./static/js/main.c2a95b45.js",
+    "main.css": "./static/css/main.433865a9.css",
+    "main.js": "./static/js/main.e9a110f7.js",
     "static/js/787.67cdcd17.chunk.js": "./static/js/787.67cdcd17.chunk.js",
     "static/media/WhatsApp Video 2023-02-27 at 9.44.47 PM.mp4": "./static/media/WhatsApp Video 2023-02-27 at 9.44.47 PM.4d94f4582e0cd673e1e9.mp4",
     "static/media/business-woman.png": "./static/media/business-woman.0b2b4db0334d94d20f46.png",
+    "static/media/contactus-hero.png": "./static/media/contactus-hero.c8502df34704b6dfc4ef.png",
+    "static/media/about-hero.png": "./static/media/about-hero.6d142fc1d8259fb15cf4.png",
     "static/media/Rectangle 18.png": "./static/media/Rectangle 18.13206275b28d653546d5.png",
     "static/media/Rectangle 17.png": "./static/media/Rectangle 17.356335cae9015bfef62a.png",
+    "static/media/Atinuke.png": "./static/media/Atinuke.59a8bbdbd34587f25073.png",
+    "static/media/Chimdindu.png": "./static/media/Chimdindu.838d219c21b99864d0eb.png",
+    "static/media/Ezinma.png": "./static/media/Ezinma.8e536e3f72ce24390ef9.png",
+    "static/media/Kasie.png": "./static/media/Kasie.f5789adada3fa8fb7ad6.png",
+    "static/media/Chinemerem.png": "./static/media/Chinemerem.59972960c3e6d26caff8.png",
+    "static/media/Fikona.png": "./static/media/Fikona.5fd667f4b318dd2830de.png",
+    "static/media/Willie.png": "./static/media/Willie.7fffe3e682edab7c23fe.png",
+    "static/media/Chinwe.png": "./static/media/Chinwe.d3cd51154fcb42d0c045.png",
+    "static/media/Kadija.png": "./static/media/Kadija.ddaa039723bdc6846567.png",
     "static/media/Teelims.png": "./static/media/Teelims.a97f841b9a1f30474c88.png",
+    "static/media/Ihuoma.png": "./static/media/Ihuoma.2dff0549d7b0d802433a.png",
     "static/media/Rytworth.png": "./static/media/Rytworth.4d6d017ae4f090a5d292.png",
+    "static/media/Ogochukwu.png": "./static/media/Ogochukwu.685c406d1f1ca859acad.png",
     "static/media/white logo 2.png": "./static/media/white logo 2.7ecfce7e556818209ced.png",
     "static/media/bub.png": "./static/media/bub.667a3ad8bbe3393b1312.png",
     "static/media/mafiz.png": "./static/media/mafiz.0920d78cadf38e26e31a.png",
     "static/media/ASI.png": "./static/media/ASI.15bbe45bb653ddf74eb6.png",
     "index.html": "./index.html",
-    "main.de3339ce.css.map": "./static/css/main.de3339ce.css.map",
-    "main.c2a95b45.js.map": "./static/js/main.c2a95b45.js.map",
+    "main.433865a9.css.map": "./static/css/main.433865a9.css.map",
+    "main.e9a110f7.js.map": "./static/js/main.e9a110f7.js.map",
     "787.67cdcd17.chunk.js.map": "./static/js/787.67cdcd17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de3339ce.css",
-    "static/js/main.c2a95b45.js"
+    "static/css/main.433865a9.css",
+    "static/js/main.e9a110f7.js"
   ]
 }
