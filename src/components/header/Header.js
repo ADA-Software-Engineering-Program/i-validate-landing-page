@@ -21,8 +21,8 @@ const Header = () => {
 
 
   return (
-    <Navbar expand="lg" fixed="top" bg="white" className="navbar-main">
-      <Container className="bg-white">
+    <Navbar expand="lg"  className="navbar-main">
+      <Container>
         <Navbar.Brand href="/"> 
           <img src={Logo} alt="logo" className="headerLogo"/>
         </Navbar.Brand>
