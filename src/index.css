@@ -67,9 +67,9 @@ code {
   background-color: rgba(255, 204, 0, 1);
   width: 100%;
   height: 50px;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
   color: #1c1c1c;
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }
 
 .researchRight {
@@ -114,14 +114,14 @@ code {
   width: 100%;
   height: 50px;
   padding: 1rem;
-  margin: .4rem 0rem;
+  margin: 0.4rem 0rem;
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .numberSection {
-  padding-top:3rem ;
-  margin: 0rem .4rem;
+  padding-top: 3rem;
+  margin: 0rem 0.4rem;
 }
 
 .researchLeft {
@@ -134,7 +134,7 @@ code {
 }
 
 .title {
- font-size: 30px;
+  font-size: 30px;
   font-weight: 600;
   color: rgba(18, 18, 59, 1);
 }
@@ -152,19 +152,16 @@ code {
 .testifyCard {
   width: 75%;
   margin: auto;
-  margin-top: .6rem;
-  padding: .8rem;
-  border-radius: .2rem;
+  margin-top: 0.6rem;
+  padding: 0.8rem;
+  border-radius: 0.2rem;
   background-color: #fff;
   cursor: pointer;
 }
 
 .testifyCard :hover {
-  box-shadow: .3rem rgba(37, 37, 217, 0.09);
+  box-shadow: 0.3rem rgba(37, 37, 217, 0.09);
 }
-
-
-
 
 /* @media only screen and (min-width:768px){
   .hero {
@@ -209,9 +206,7 @@ code {
   }
 } */
 
-@media only screen and (min-width:1024px) {
-  
-  
+@media only screen and (min-width: 1024px) {
   .box {
     position: absolute;
     top: 31%;
@@ -220,7 +215,7 @@ code {
     height: 102px;
     z-index: -1;
   }
-  
+
   .box1 {
     background-color: #1c1c1c;
   }
@@ -237,15 +232,15 @@ code {
   .planDetail {
     padding: 7rem 0rem;
   }
-  
+
   .researchLeft {
-    margin-top: .2rem;
+    margin-top: 0.2rem;
   }
-  
+
   .heroLeft {
     background-color: rgba(41, 41, 136, 0.1);
   }
-  
+
   .researchRight {
     position: relative;
     background-color: rgba(41, 41, 136, 1);
@@ -258,12 +253,12 @@ code {
     border-radius: 25px;
     z-index: 1;
   }
-  
+
   .numbText {
     font-size: 60px;
     font-weight: 700;
   }
-  
+
   .circle {
     height: 40px;
     width: 40px;
@@ -271,12 +266,12 @@ code {
     border-radius: 50%;
     background-color: rgba(255, 204, 0, 1);
   }
-  
+
   .numberSection {
     margin: auto 4.5rem;
     padding-top: 6rem;
   }
-  
+
   .researchShadow {
     position: absolute;
     top: 55%;
@@ -286,7 +281,7 @@ code {
     border-radius: 20px;
     background-color: rgba(41, 41, 136, 0.06);
   }
-  
+
   .wave {
     width: 25%;
     height: 50%;
@@ -294,34 +289,32 @@ code {
     margin-top: 4rem;
     transform: rotate(140deg);
   }
-  
+
   .planForm {
     background-color: rgba(41, 41, 136, 0.07);
     padding: 3rem;
     margin: 6rem 0rem;
     margin-top: 7.5rem;
   }
-  
+
   .planInput {
     width: 100%;
     height: 50px;
     padding: 1rem;
-    margin: .4rem 0rem;
+    margin: 0.4rem 0rem;
     border: none;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
-  
-  
+
   .title {
-   font-size: 47px;
+    font-size: 47px;
     font-weight: 600;
     color: rgba(18, 18, 59, 1);
   }
-  
+
   .subTitle {
     font-size: 26px;
     font-weight: 600;
     color: rgba(18, 18, 59, 1);
   }
-  
 }

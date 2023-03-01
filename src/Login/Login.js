@@ -62,6 +62,7 @@ const Login = () => {
                     </button>
                     <span className="mt-3">
                       <p>Create account with</p>
+                      <img src/>
                     </span>
                   </div>
                 </Form>
