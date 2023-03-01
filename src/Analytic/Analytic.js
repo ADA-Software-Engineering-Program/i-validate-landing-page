@@ -55,7 +55,7 @@ const Analar = ({ item }) => {
             style={{ backgroundColor: '#292988' }}
             className="d-flex flex-column "
           >
-            <div className="p-0 m-0 ml-4">
+            <div className="p-0 m-0 ml-4 mr-4">
               <img
                 src={img}
                 alt={title}
