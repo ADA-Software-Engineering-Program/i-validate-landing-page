@@ -108,7 +108,7 @@ const AboutUs = () => {
     <AppLayout>
       <div className="about-container">
         <div className="aboutUs-title container">
-          <h1>Let Us Validate Your Business Idea</h1>
+          <h1 >Let Us Validate Your Business Idea</h1>
           <p>
             i-validate is a web app developed to help entrepreneurs validate
             their business ideas before investing significant resources.

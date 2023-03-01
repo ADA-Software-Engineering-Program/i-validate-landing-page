@@ -127,4 +127,8 @@
           width: 100%;
       }
      
+      .contactUs-title h1 {
+        font-size: 2.5rem;
+        margin: -1rem 0;
+      }
   }

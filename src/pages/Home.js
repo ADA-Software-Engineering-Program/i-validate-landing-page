@@ -20,7 +20,7 @@ const Hero = () => {
           I-validate provide a screening process for new business ideas, to answer a series of questions to determine if their idea has potential.
           </p>
         
-          <Link to='../Form/Form.js' className='btn heroBtn'>Get Started</Link>
+          <Link to='/Signup' className='btn heroBtn'>Get Started</Link>
         </article>
 
         <div className='col-lg-6 mt-lg-0 mt-3 me-lg-0 heroLeft'>

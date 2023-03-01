@@ -3,6 +3,7 @@ import React from 'react';
 import img3 from '../images/analar.png';
 import img2 from '../images/analytic.png';
 import img1 from '../images/Rectangle.png';
+import AppLayout from '../layout/AppLayout';
 
 const List = [
   {
@@ -43,7 +44,8 @@ const Analar = ({ item }) => {
   const { title, content, img } = item;
   console.log(title, content, img);
   return (
-    <div className="row mt-5 mb-5" id="con">
+    <AppLayout>
+      <div className="row mt-5 mb-5" id="con">
       <div className="d-flex justify-content-around  align-items-center ">
         <div className="col-md-4 mr-4">
           {' '}
@@ -67,6 +69,7 @@ const Analar = ({ item }) => {
         </div>
       </div>
     </div>
+    </AppLayout>
   );
 };
 export default Analytic;

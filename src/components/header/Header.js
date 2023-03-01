@@ -32,8 +32,8 @@ const Header = () => {
             <Nav.Link href={"/"}  className={splitLocation[1] === "" ? "active" : ""}>Home</Nav.Link>
             <Nav.Link href={"./AboutUs"} className={splitLocation[1] === "AboutUs" ? "active" : ""}>About Us</Nav.Link>
             <Nav.Link href={"./ContactUs"} className={splitLocation[1] === "ContactUs" ? "active" : ""}>Contact Us</Nav.Link>
-            <Nav.Link href={"#analytics"} className={splitLocation[1] === "analytics" ? "active" : ""}>Analytics</Nav.Link>
-            <Nav.Link href={"./Dashboard"} className={splitLocation[1] === "sign up" ? "active" : ""}>Dashboard</Nav.Link>
+            <Nav.Link href={"./Analytics"} className={splitLocation[1] === "analytics" ? "active" : ""}>Analytics</Nav.Link>
+            {/* <Nav.Link href={"./Dashboard"} className={splitLocation[1] === "sign up" ? "active" : ""}>Dashboard</Nav.Link> */}
             <Nav.Link href={"./Login"} className={splitLocation[1] === "Login" ? "active" : ""}>Log In</Nav.Link>
           </Nav>
         </Navbar.Collapse>

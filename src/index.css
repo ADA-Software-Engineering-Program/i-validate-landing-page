@@ -45,7 +45,7 @@ code {
 }
 
 .heroBtn:hover {
-  background-color: #fff;
+  background: #fff !important;
   color: rgba(41, 41, 136, 1);
   font-size: 1.5rem;
 }
@@ -74,6 +74,11 @@ code {
   padding-top: .8rem;
   color: #1c1c1c;
   margin-top: .4rem;
+}
+
+.heroBtn2:hover {
+  background-color: rgb(32, 175, 32) !important;
+  color: rgba(255, 204, 0, 1);
 }
 
 .researchRight {

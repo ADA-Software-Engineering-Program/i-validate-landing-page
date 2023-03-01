@@ -11,7 +11,7 @@ const Signup = () => {
       <div className='color-side'>
         <div className='signin-option d-flex justify-content-center align-items-center'>
             <p>Already have an Account?</p>
-            <Link to='#' className='signin-option-btn'>Sign In</Link>
+            <Link to='/Login' className='signin-option-btn'>Sign In</Link>
         </div>
         <div className='light-bub d-flex justify-content-center align-items-center'>
             <img src={Bub} alt='Light' />

@@ -1,7 +1,7 @@
 
 
 .hiUser {
-    width: 100%;
+    width: 30px;
     height: auto;
 }
 
@@ -46,9 +46,9 @@
 }
 
 .dIcons{
-    /* margin-top: -3rem; */
-    margin-right: 1.2rem;
-    width: 1.3rem;
+    margin-bottom: 6rem;
+    /* margin-right: 1.2rem; */
+    width: 2rem;
     height: auto;
     color: rgba(41, 41, 136, 1);
 }
@@ -64,15 +64,19 @@
     background-color: rgba(251, 197, 4, 0.2);
 }
 
+.dIcons1{
+    margin-top: 1.3rem;
+}
+
 .dInput {
     width: 20rem;
     height: 5rem;
-    margin-top: .5rem;
+    margin-top: .2rem;
 }
 
 .ideaSection {
-    margin-top: 1rem;
-    padding-left: 2rem;
+    margin-top: .2rem;
+    padding-left: -1rem;
 }
 
 .ideaSection2 {
@@ -88,7 +92,7 @@
 }
 
 .iBtn {
-    margin-left: 4rem;
+    margin-left: 1rem;
     margin-top: 2rem;
 }
 
@@ -110,11 +114,11 @@
 
 .custCard {
     margin-top: 1rem;
-    justify-items: justif;
+    justify-items: space-between;
 }
 
 .custLink {
-    margin: auto 14rem;
+    margin: auto 1rem;
 }
 
 
@@ -140,5 +144,93 @@
 
     .dIcons1{
         margin-top: -1.5rem;
+    }
+
+    .dSection {
+        padding-bottom: 2rem;
+        box-shadow: .4rem .4rem .5rem rgba(37, 37, 217, 0.09), -.4rem -.4rem .5rem rgba(37, 37, 217, 0.09);
+    }
+    
+    .custBtn {
+        font-size: .7rem;
+        border: 1.8px solid rgba(41, 41, 136, 1) ;
+        border-radius: .3rem;
+        color: rgba(41, 41, 136, 1);
+        background-color: transparent;
+    }
+    
+    .findBtn {
+        background-color: rgba(41, 41, 136, 1);
+        color: #fff;
+    }
+    
+    .mdLog {
+        width: 1.1rem;
+        height: auto;
+        transform: rotate(-90deg);
+    }
+
+    .notice {
+        color: rgba(255, 168, 0, 1);
+        width: 1.3rem;
+        height: auto;
+    }
+    #notice {
+        margin: auto 2rem;
+        color: rgba(255, 168, 0, 1);
+        background-color: rgba(251, 197, 4, 0.2);
+    }
+    
+    .dInput {
+        width: 20rem;
+        height: 5rem;
+        margin-top: .5rem;
+    }
+    
+    .ideaSection {
+        margin-top: 1rem;
+        padding-left: 2rem;
+    }
+    
+    .ideaSection2 {
+        margin-top: 1.5rem;
+        padding-left: 2.2rem;
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 1);
+    }
+    
+    .dQuestion {
+        padding-top: 1.3rem;
+    }
+    
+    .iBtn {
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+    
+    .dRadio {
+        margin-right: .5rem;
+    }
+    
+    .researchQuestion, .newBtn {
+        margin: auto 1.6rem;
+        margin-top: 1.2rem;
+    }
+    
+    .dPlus{
+        width: 1.3rem;
+        height: auto;
+        margin-right: .5rem;
+        color: rgba(41, 41, 136, 1);
+    }
+    
+    .custCard {
+        margin-top: 1rem;
+        justify-items: justif;
+    }
+    
+    .custLink {
+        margin: auto 14rem;
     }
 }
