@@ -47,7 +47,7 @@ const Analar = ({ item }) => {
   console.log(title, content, img);
   return (
     <div className="row mt-5 mb-5" id="con">
-      <div className="d-flex justify-content-around  align-items-center ">
+      <div className="d-md-flex justify-content-around  align-items-center ">
         <div className="col-md-4 mr-4">
           {" "}
           <h1>{title}</h1>

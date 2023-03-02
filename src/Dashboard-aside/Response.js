@@ -64,6 +64,7 @@ const AddContact = () => {
             <h3>Insights</h3>
             <p>These are automatically pulled from your conversations as you go</p>
         </div>
+        <div>Hello world</div>
       </div>
       <div>
         <Link

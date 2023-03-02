@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Login from '../src/Login/Login';
+// import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Signup from './signup/Signup';
 import Home from './pages/Home';
@@ -17,6 +19,7 @@ import Response from './Dashboard-aside/Response';
 function App() {
   return (
     <>
+      {/* <ToastContainer/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

@@ -139,11 +139,12 @@
     }
 
     .dIcons {
-        margin-top: -6rem;
+        margin-top: 0rem;
+        margin-right: 1rem;
     }
 
     .dIcons1{
-        margin-top: -1.5rem;
+        margin-top: 1rem;
     }
 
     .dSection {
