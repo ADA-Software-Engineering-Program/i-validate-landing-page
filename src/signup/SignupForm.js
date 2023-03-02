@@ -86,7 +86,7 @@ export default function SignupForm() {
                 name="fullName"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className=""
+                className="ps-3"
                 />
             </div>
             <div>
@@ -96,7 +96,7 @@ export default function SignupForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 name="email"
-                className=""
+                className="ps-3"
                 />
             </div>
             <div>
@@ -107,7 +107,7 @@ export default function SignupForm() {
                     onChange={handlePasswordInputChange}
                     value={password}
                     name="password"
-                    className=""
+                    className="ps-3"
                 />
                 <div className=" ">
                     <button onClick={togglePassword} className="signup-icon">

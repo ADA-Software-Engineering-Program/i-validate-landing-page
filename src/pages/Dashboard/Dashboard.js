@@ -39,7 +39,7 @@ function Dashboard() {
                 <h4 className='fw-bolder my-auto'>Overview</h4>
                 <div className='d-flex justify-content-between'>
                     <Link className='my-auto text-decoration-none text-dark'
-                    to="/Home"
+                    to="/"
                     // onClick={logOut}
                     >Log Out</Link>
                     <div>
