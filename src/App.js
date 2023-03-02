@@ -10,6 +10,9 @@ import AboutUs from './AboutUs/AboutUs';
 import ContactUs from './ContactUs/ContactUs';
 import Reset from './reset/Reset';
 import Analytic from '../src/Analytic/Analytic';
+import AddContact from './Dashboard-aside/AddContact';
+import Feedback from './Dashboard-aside/Feedback';
+import Response from './Dashboard-aside/Response';
 
 function App() {
   return (
@@ -23,6 +26,10 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>  
         <Route path="/Analytic" element={<Analytic />} />
         <Route path="/Reset" element={<Reset />} />
+        <Route path='/AddContact' element={<AddContact />} />
+        <Route path='/Feedback' element={<Feedback />} />
+        <Route path='/Response' element={<Response />} />
+
       </Routes>
     </>
   );
