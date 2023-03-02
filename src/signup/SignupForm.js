@@ -1,28 +1,67 @@
 import { useState } from "react";
 import { BsFillEyeFill, BsEyeSlashFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from '../images/signup-logo.png'
 import { FcGoogle } from "react-icons/fc";
 import { CiFacebook } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import auth from "../config/firebase";
+import {  provider } from "../config/firebase";
+import { toast } from "react-toastify";
 
 export default function SignupForm() {
-  const [passwordType, setPasswordType] = useState("password");
-  const [passwordInput, setPasswordInput] = useState("");
-  const handlePasswordChange = (evnt) => {
-    setPasswordInput(evnt.target.value);
+  // const [passwordType, setPasswordType] = useState("password");
+  const [showPassword, setShowPassword] = useState(false);
+  // const [passwordInput, setPasswordInput] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handlePasswordInputChange = (e) => {
+    setPassword(e.target.value);
   };
+
+  // const [verified, setVerified] = useState(false);
+  
+
+  const navigate = useNavigate();
+
+  // function onChange() {
+  //   setVerified(true);
+  // }
   const togglePassword = () => {
-    if (passwordType === "password") {
-      setPasswordType("text");
-      return;
-    }
-    setPasswordType("password");
+    setShowPassword(!showPassword);
   };
+  
 
   function handleSubmit(event) {
     event.preventDefault();
-  }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userDetail) => {
+        console.log(userDetail);
+        toast.success("Registration is successful");
+        navigate("/login");
+      })
+      .catch((error) => {
+        toast.error("Something went wrong, Try again later");
+        console.log(error);
+      });
+  };
+
+
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((data) => {
+        // setGoogleValue(data.user.email)
+        console.log(data);
+        toast.success("Registration with google is successful");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Something went wrong, Try again later");
+      });
+  };
 
   return (
       <main className="signup-main-form">
@@ -45,6 +84,8 @@ export default function SignupForm() {
                 <input
                 type="text"
                 name="fullName"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
                 className=""
                 />
             </div>
@@ -52,6 +93,8 @@ export default function SignupForm() {
                 <label>Email</label>
                 <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 name="email"
                 className=""
                 />
@@ -60,18 +103,25 @@ export default function SignupForm() {
             <label>Password</label>
                 <div className="password-icon">
                 <input
-                    type={passwordType}
-                    onChange={handlePasswordChange}
-                    value={passwordInput}
+                    type={showPassword ? "text" : "password"}
+                    onChange={handlePasswordInputChange}
+                    value={password}
                     name="password"
                     className=""
                 />
                 <div className=" ">
                     <button onClick={togglePassword} className="signup-icon">
-                    {passwordType === "password" ? (
-                        <BsFillEyeFill  />
+                    {showPassword === "password" ? (
+                        <BsFillEyeFill 
+                        onClick={() => {
+                          setShowPassword(!showPassword);
+                        }} />
                     ) : (
-                        <BsEyeSlashFill />
+                        <BsEyeSlashFill 
+                        onClick={() => {
+                          setShowPassword(!showPassword);
+                        }}
+                        />
                     )}
                     </button>
                 </div>
@@ -89,7 +139,9 @@ export default function SignupForm() {
                 <span>Create account with  </span>
                 <div className="icons-group d-flex">
                 <Link to='#'><CiFacebook className="icons-main"/></Link>
-                <Link to='#'><FcGoogle className="icons-main"/></Link>
+                <buttton onClick={handleGoogleSignIn}>
+                  <FcGoogle className="icons-main"/>
+                </buttton>
                 <Link to='#'><FaLinkedinIn className="icons-main"/></Link>
                 </div>
             </div>

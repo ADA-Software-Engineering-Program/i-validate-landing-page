@@ -5,6 +5,7 @@ import './Login.css';
 
 const Login = () => {
   const [passwordType, setPasswordType] = useState('password');
+  
   const togglePassword = () => {
     if (passwordType === 'password') {
       setPasswordType('text');

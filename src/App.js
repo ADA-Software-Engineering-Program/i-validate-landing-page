@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Login from '../src/Login/Login';
+// import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 import Signup from './signup/Signup';
 import Home from './pages/Home';
@@ -13,6 +15,7 @@ import Analytic from '../src/Analytic/Analytic';
 function App() {
   return (
     <>
+      {/* <ToastContainer/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
