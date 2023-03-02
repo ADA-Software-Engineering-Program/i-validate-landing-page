@@ -1,68 +1,92 @@
-import { Col, Row, Container, Form } from 'react-bootstrap';
-import { BsFillEyeFill, BsEyeSlashFill } from 'react-icons/bs';
-import { useState } from 'react';
-import './Login.css';
+import { Col, Row, Container, Form } from "react-bootstrap";
+import { BsFillEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import LoginIntro from "./login-intro.jpg";
+import { FcGoogle } from "react-icons/fc";
+import Logo from "../images/signup-logo.png";
+import "./Login.css";
 
 const Login = () => {
-  const [passwordType, setPasswordType] = useState('password');
+
+  const [passwordType, setPasswordType] = useState("password");
   const togglePassword = () => {
-    if (passwordType === 'password') {
-      setPasswordType('text');
+    if (passwordType === "password") {
+      setPasswordType("text");
       return;
     }
-    setPasswordType('password');
+    setPasswordType("password");
   };
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
-    <div>
-      <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
-          <Col md={8} lg={6} xs={12}>
-            <div className=""></div>
-
+    <div className="d-flex login-container">
+      <Container className="form-side my-5">
+        <Row className="mt-4 d-flex align-items-center justify-content-center">
+          <Col md={12} lg={9} xs={12}>
+            <div className="login-logo">
+              <img src={Logo} alt="Logo" />
+            </div>
             <div className="mb-1 mt-md-4 ">
-              <h2 className="fw-bold mb-2  ">Welcome to i-validate</h2>
-              <p className=" mb-1">Register your account</p>
-              <div className="mb-3 mt-1">
-                <Form className="bg-white mt-1">
-                  <Form.Group className="mb-3 " controlId="formBasicEmail">
-                    <Form.Label className="text-center">Name</Form.Label>
-                    <Form.Control type="text" />
-                  </Form.Group>
-
+              <div className="login-heading">
+                <h2 className="fw-bold mb-2 login-title">Hi, Welcome Back!</h2>
+                <p className=" mb-1 login-subtitle">Log in to your account</p>
+              </div>
+              <div>
+                <Link to="#" className="login-google h50 d-flex align-items-center  justify-content-center">
+                  <FcGoogle />
+                  <span>Sign in with Google</span>
+                </Link>
+                <p className="text-center my-4">Or</p>
+              </div>
+              <div className="mb-3">
+                <Form className="bg-white mt-1" onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label className="text-center">Email</Form.Label>
-                    <Form.Control type="email" />
+                    <Form.Label className="login-label">Your Email</Form.Label>
+                    <Form.Control
+                      type="email"
+                      placeholder="samtruty@gmail.com"
+                      className="h50"
+                    />
                   </Form.Group>
                   <div>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control type="password" />
+                      <Form.Label className="login-label">Password</Form.Label>
+                      <div className="position-relative">
+                        <Form.Control
+                          type="password"
+                          placeholder="Password must include at least 8 characters"
+                          className="h50"
+                        />
+                        <div>
+                          <button className="login-icon" onClick={togglePassword}>
+                            {passwordType === "password" ? (
+                              <BsFillEyeFill className="text-dark  position-relative top-0 end-0 " />
+                            ) : (
+                              <BsEyeSlashFill className="text-dark position-relative top-0 end-0" />
+                            )}
+                          </button>
+                        </div>
+                      </div>
                     </Form.Group>
-                    <Form.Group
-                      className="mb-3 "
-                      controlId="formBasicCheckbox"
-                    ></Form.Group>
-                    <div className=" ">
-                      <button className="" onClick={togglePassword}>
-                        {passwordType === 'password' ? (
-                          <BsFillEyeFill className="text-dark  position-relative top-0 end-0 " />
-                        ) : (
-                          <BsEyeSlashFill className="text-dark position-relative top-0 end-0" />
-                        )}
-                      </button>
-                    </div>
+                  </div>
+                  <div>
+                    <Link to='/Reset' className="login-forgot mb-4">Forgot Password?</Link>
                   </div>
                   <div>
                     <button
                       type="button mb-3"
-                      className="btn btn-primary btn-sm "
+                      className="btn btn-primary btn-sm h50"
                       id="btn"
                     >
                       Login
                     </button>
-                    
+
                     <span className="mt-3">
-                      <p>Create account with</p>
+                      <Link to="/SignUp" className="no-account text-decoration-none mt-4 d-block">Don't have an account</Link>
                     </span>
                   </div>
                 </Form>
@@ -71,6 +95,14 @@ const Login = () => {
           </Col>
         </Row>
       </Container>
+      <div className="login-color-side d-flex align-items-center flex-column justify-content-center">
+        <div className="login-intro">
+          <img src={LoginIntro} alt="Analytics" />
+        </div>
+        <div>
+          <p>Bringing Ideas to reality</p>
+        </div>
+      </div>
     </div>
   );
 };
