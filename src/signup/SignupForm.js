@@ -55,7 +55,7 @@ export default function SignupForm() {
         // setGoogleValue(data.user.email)
         console.log(data);
         toast.success("Registration with google is successful");
-        navigate("/login");
+        navigate("/Dashboard");
       })
       .catch((error) => {
         console.log(error);

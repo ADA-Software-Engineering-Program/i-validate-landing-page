@@ -6,22 +6,53 @@ import LoginIntro from "./login-intro.jpg";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "../images/signup-logo.png";
 import "./Login.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import auth from "../config/firebase";
+import { provider } from "../config/firebase";
+import { signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  
+  const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [passwordType, setPasswordType] = useState("password");
+  const navigate = useNavigate();
+
+  // const [passwordType, setPasswordType] = useState("password");
   
   const togglePassword = () => {
-    if (passwordType === "password") {
-      setPasswordType("text");
-      return;
-    }
-    setPasswordType("password");
+    setShowPassword(!showPassword);
   };
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  const signIn = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userDetail) => {
+        console.log(userDetail);
+        toast.success("Login is successful");
+        navigate("/Dashboard");
+      })
+      .catch((error) => {
+        toast.error("Something went wrong, email or password is incorrect");
+        console.log(error);
+      });
+  };
+
+  const onGoogleSubmitHandler = () => {
+    signInWithPopup(auth, provider)
+      .then((data) => {
+        // setGoogleValue(data.user.email)
+        console.log(data);
+        toast.success("Login with google is successful");
+        navigate("/Dashboard");
+      })
+      .catch((error) => {
+        toast.error("Something went wrong, Try again later");
+      });
+  };
 
   return (
     <div className="d-flex login-container">
@@ -37,19 +68,23 @@ const Login = () => {
                 <p className=" mb-1 login-subtitle">Log in to your account</p>
               </div>
               <div>
-                <Link to="#" className="login-google h50 d-flex align-items-center  justify-content-center">
+                <button className="login-google h50 d-flex align-items-center  justify-content-center"
+                onClick={onGoogleSubmitHandler}
+                >
                   <FcGoogle />
                   <span>Sign in with Google</span>
-                </Link>
+                </button>
                 <p className="text-center my-4">Or</p>
               </div>
               <div className="mb-3">
-                <Form className="bg-white mt-1" onSubmit={handleSubmit}>
+                <Form className="bg-white mt-1" onSubmit={signIn}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className="login-label">Your Email</Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="samtruty@gmail.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="h50"
                     />
                   </Form.Group>
@@ -58,16 +93,28 @@ const Login = () => {
                       <Form.Label className="login-label">Password</Form.Label>
                       <div className="position-relative">
                         <Form.Control
-                          type="password"
                           placeholder="Password must include at least 8 characters"
                           className="h50"
+                          type={showPassword ? "text" : "password"}
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                         <div>
                           <button className="login-icon" onClick={togglePassword}>
-                            {passwordType === "password" ? (
-                              <BsFillEyeFill className="text-dark  position-relative top-0 end-0 " />
+                            {showPassword ? (
+                              <BsFillEyeFill 
+                              className="text-dark  position-relative top-0 end-0 " 
+                              onClick={() => {
+                                setShowPassword(!showPassword);
+                              }}
+                              />
                             ) : (
-                              <BsEyeSlashFill className="text-dark position-relative top-0 end-0" />
+                              <BsEyeSlashFill 
+                              className="text-dark position-relative top-0 end-0" 
+                              onClick={() => {
+                                setShowPassword(!showPassword);
+                              }}
+                              />
                             )}
                           </button>
                         </div>

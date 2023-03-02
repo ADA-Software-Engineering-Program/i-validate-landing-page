@@ -1,21 +1,47 @@
-import React from 'react'
-import './Dashboard.css'
-import { Link } from 'react-router-dom'
-import { HiUserCircle } from 'react-icons/hi'
-import Dlogo from '../../images/i-validate-logo-optimiz.jpg'
-import { BsPatchCheckFill } from 'react-icons/bs'
-import { MdAddCircle } from 'react-icons/md'
-import Customer from './Customer'
-import Radiobtn from './Radiobtn'
+import React from 'react';
+import './Dashboard.css';
+import { Link } from 'react-router-dom';
+import { HiUserCircle } from 'react-icons/hi';
+import Dlogo from '../../images/i-validate-logo-optimiz.jpg';
+import { BsPatchCheckFill } from 'react-icons/bs';
+import { MdAddCircle } from 'react-icons/md';
+import Customer from './Customer';
+import Radiobtn from './Radiobtn';
+// import { signOut } from 'firebase/auth';
+// import auth from '../config/firebase/auth';
+// import { useNavigate } from 'react-router-dom';
+// import { toast } from 'react-toastify';
+
 
 function Dashboard() {
+  // import { getAuth, signOut } from "firebase/auth";
+
+  // const navigate = useNavigate();
+
+  // const logOut = () => {
+  //   signOut(auth)
+  //     .then(() => {
+  //       // Sign-out successful.
+  //       toast.success('Logout is successful');
+  //       navigate('/Home');
+  //     })
+  //     .catch((error) => {
+  //       // An error happened.
+  //       toast.error('Logout failed');
+  //     });
+  // };
+
+
   return (
     
         <main className='container'>
             <div className='d-flex justify-content-between my-3'>
                 <h4 className='fw-bolder my-auto'>Overview</h4>
                 <div className='d-flex justify-content-between'>
-                    <Link className='my-auto text-decoration-none text-dark'>Log Out</Link>
+                    <Link className='my-auto text-decoration-none text-dark'
+                    to="/Home"
+                    // onClick={logOut}
+                    >Log Out</Link>
                     <div>
                       <HiUserCircle className='hiUser'/>
                     </div>

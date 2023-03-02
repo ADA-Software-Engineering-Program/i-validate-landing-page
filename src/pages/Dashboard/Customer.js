@@ -46,10 +46,10 @@ function Customer() {
                 <span>Add at least one contact.</span>
             </div>
         </div>
-        <div className='d-flex justify-content-between my-2' id='notice'>
+        <div className='d-flex justify-content-between my-md-0' id='notice'>
             <div className='d-flex'>
                 <BsFillExclamationCircleFill className='notice'/>
-                <p className='my-auto ms-1'>You’ve added some contacts. Go manage them in the contact tab:</p>
+                <p className='my-auto ms-1 fs-md-4'>You’ve added some contacts. Go manage them in the contact tab:</p>
             </div>
             <div className='d-flex'>
                 <p className='my-auto'>Go to contacts</p>
