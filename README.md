@@ -1,4 +1,3 @@
-
 Readme for i-validate app
 
 ## Project Overview
@@ -12,6 +11,10 @@ The Idea Validation app is designed to help entrepreneurs and innovators validat
 -Bootstrap
 -React
 -Firebase
+
+## Setting Up the repository
+
+this project was bootstrap using create-react-app
 
 ## Folder Structure
 
@@ -60,7 +63,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 [## Product requirements document(PRD)](https://www.notion.so/Product-Requirement-Document-PRD-for-i-validate-bd8436f329d74bc5afa3cdff9e6c2ac3)
 
 [## Technical requirements document(TRD)](https://house-ikenga.gitbook.io/i-validate-trd/)
-
-
-
-
+[link to our landing page](https://i-validate-landing-page.vercel.app/)
