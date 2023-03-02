@@ -1,7 +1,117 @@
+
 #btn {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding: 7px 5rem;
+  background: #292988;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+  width: 100%;
+}
+
+.login-container {
+  font-family: "Inter";
+  font-style: normal;
+}
+
+.login-color-side {
   background-color: #292988;
+  flex-basis: 40%;
+  color: #ffffff;
+}
+.login-color-side p {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 29px;
+  color: #ffffff;
+}
+.login-logo {
+  width: 100%;
+}
+
+.login-intro img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-side {
+  flex-basis: 60%;
+  padding: 0 3rem;
+}
+
+.login-heading {
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+.login-title {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.login-subtitle {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.login-container .login-label {
+  font-weight: 500;
+  color: #000000;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.login-logo {
+  margin-bottom: 2.688rem;
+}
+
+.login-logo img {
+  width: 10rem;
+}
+
+.login-google {
+  border: 1px solid #D9D9D9;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  background-clip: padding-box;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.login-google span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-left: 1rem;
+}
+.login-icon {
+  position: absolute;
+  top: 25%;
+  right: 3%;
+  border: none;
+  background-color: transparent;
+}
+
+.login-forgot {
+  color: #292988;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+}
+
+.no-account {
+  font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+color: #9C9C9C;
+}
+
+.h50 {
+  height: 50px;
 }

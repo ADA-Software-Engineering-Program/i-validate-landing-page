@@ -6,7 +6,7 @@
 
 .contact-container {
     font-style: normal;
-    margin: 12rem 0 5rem;
+    margin: 5rem 0;
 }
 
 .contact-img-box img {
@@ -15,6 +15,10 @@
 
 .contact-img-box {
     margin: 5.625rem 0;
+  }
+
+  .contactUs-title {
+    text-align: center;
   }
 
 .contactUs-title h1 {
@@ -59,7 +63,7 @@
       gap: 15px;
   }
   
-  .form-control {
+  .contact-form-control {
       height: 50px;
       margin: .8rem 0rem;
   }
@@ -113,6 +117,9 @@
     width: 100%;
   }
   @media (max-width: 725px) {
+    .contact-container {
+        margin: 3rem 0;
+    }
       .form-name {
           flex-wrap: wrap;
       }
@@ -129,6 +136,10 @@
      
       .contactUs-title h1 {
         font-size: 2.5rem;
-        margin: -1rem 0;
+        line-height: 40px;
+        margin-bottom: 0.5rem;
       }
+      .contact-img-box {
+        margin: 3rem 0;
+    }
   }
