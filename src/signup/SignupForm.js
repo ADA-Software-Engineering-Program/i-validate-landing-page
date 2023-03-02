@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsFillEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from '../images/signup-logo.png'
+import Logo from '../images/signup-logo.png';
 import { FcGoogle } from "react-icons/fc";
 import { CiFacebook } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -145,10 +145,12 @@ export default function SignupForm() {
                 <Link to='#'><FaLinkedinIn className="icons-main"/></Link>
                 </div>
             </div>
-                <div className='signin-option d-flex align-items-center mt-3 show'>
+            <div className="show">
+                <div className='signin-option d-flex align-items-center mt-4'>
                     <p>Already have an Account?</p>
-                    <Link to='#' className='signin-option-btn moved'>Sign In</Link>
+                    <Link to='/Login' className='signin-option-btn moved'>Sign In</Link>
                 </div>
+            </div>
           </form>
       </main>
   );

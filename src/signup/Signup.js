@@ -6,14 +6,14 @@ import './signup.css'
 
 const Signup = () => {
   return (
-    <div className='main-signup'>
+    <div className='main-signup d-flex'>
       <SignupForm />
-      <div className='color-side'>
+      <div className='signup-color-side'>
         <div className='signin-option d-flex justify-content-center align-items-center'>
             <p>Already have an Account?</p>
             <Link to='/Login' className='signin-option-btn'>Sign In</Link>
         </div>
-        <div className='light-bub d-flex justify-content-center align-items-center'>
+        <div className='light-bub d-flex justify-content-center align-items-center my-4'>
             <img src={Bub} alt='Light' />
         </div>
         <div className='signup-details'>

@@ -27,7 +27,7 @@ code {
 }
 
 .heroDetail {
-  padding: 0rem 2rem;
+  padding: 0 2rem;
 }
 
 .heroBtn {
@@ -246,7 +246,7 @@ code {
 
   .heroDetail {
     margin-top: 9rem;
-    padding: 0rem 7rem;
+    padding: 0 2rem 0 7rem;
   }
 
   .planDetail {
@@ -340,7 +340,7 @@ code {
   
   
   .title {
-   font-size: 47px;
+   font-size: 40px;
     font-weight: 600;
     color: rgba(18, 18, 59, 1);
   }
@@ -357,4 +357,13 @@ code {
     color: rgba(18, 18, 59, 1);
   }
   
+}
+
+@media only screen and (min-width: 1245px) {
+  .heroDetail {
+    padding: 0 7rem;
+  }
+  .title {
+    font-size: 47px;
+   }
 }

@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard/Dashboard';
 import AboutUs from './AboutUs/AboutUs';
 import ContactUs from './ContactUs/ContactUs';
+import Reset from './reset/Reset';
 import Analytic from '../src/Analytic/Analytic';
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/ContactUs" element={<ContactUs />} />
-      <Route path="/dashboard" element={<Dashboard/>}/>  
-      <Route path="/Analytic" element={<Analytic />} />      
+        <Route path="/dashboard" element={<Dashboard/>}/>  
+        <Route path="/Analytic" element={<Analytic />} />
+        <Route path="/Reset" element={<Reset />} />
       </Routes>
     </>
   );

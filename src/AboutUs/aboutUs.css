@@ -6,7 +6,7 @@
 
 .about-container {
   font-style: normal;
-  margin: 12rem 0 5rem;
+  margin: 5rem 0;
 }
 
 .aboutUs-title h1 {
@@ -120,4 +120,7 @@
         width: 100%;
         font-size: 2.5rem;
     }
+    .about-container {
+      margin: 3rem 0;
+  }
 }

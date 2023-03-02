@@ -1,27 +1,19 @@
 import { Col, Row, Container, Form } from 'react-bootstrap';
-import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import '../ContactUs/contactUs.css'
 
 const Reset = () => {
-  const [passwordType, setPasswordType] = useState('password');
-  const togglePassword = () => {
-    if (passwordType === 'password') {
-      setPasswordType('text');
-      return;
-    }
-    setPasswordType('password');
-  };
+  
   return (
     <div>
       <Container>
         <Row className="vh-100 d-flex justify-content-center align-items-center">
-          <Col md={8} lg={6} xs={12}>
+          <Col md={8} lg={5} xs={10}>
             <div className=""></div>
 
             <div className="mb-1 mt-md-4 ">
               <h2 className="fw-bold mb-2  ">Reset your Password</h2>
-              <p className=" mb-1">A verification mail have been sent to your mailbox. Please check your mail</p>
+              <p className=" mb-4">A verification mail have been sent to your mailbox. Please check your mail</p>
               <div className="mb-3 mt-1">
                 <Form className="bg-white mt-1">
                   <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -39,9 +31,6 @@ const Reset = () => {
                         I'm not a robot
                         </span>
                     </div>
-                    <div >
-                        <img src={reCaptcha} alt="" className="form-img" />
-                    </div>
                     </div>                
                   <div>
                     <button
@@ -52,7 +41,7 @@ const Reset = () => {
                       Send
                     </button>
                     <span className="mt-3">
-                      <Link to="./Login">Back to Login</Link>
+                      <Link to="/Login" className='mt-3 d-block text-decoration-none'>Back to Login</Link>
                     </span>
                   </div>
                 </Form>

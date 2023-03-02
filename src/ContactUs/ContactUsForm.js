@@ -35,7 +35,7 @@ const ContactUsForm = () => {
           <div className="form-firstName">
             <input
               type="text"
-              className="form-control"
+              className="form-control contact-form-control"
               placeholder="First Name"
               name="firstName"
             />
@@ -43,7 +43,7 @@ const ContactUsForm = () => {
           <div className="form-lastName">
             <input
               type="text"
-              className="form-control"
+              className="form-control contact-form-control"
               placeholder="Last Name"
               name="lastName"
             />
@@ -53,7 +53,7 @@ const ContactUsForm = () => {
           <label className="form-label contact-text-color form-font">
             Your Comapany/Organization
           </label>
-          <input type="text" className="form-control" name="yourCompany" />
+          <input type="text" className="form-control contact-form-control" name="yourCompany" />
         </div>
         <div className="mb-3">
           <label className="form-label contact-text-color form-font">
@@ -61,7 +61,7 @@ const ContactUsForm = () => {
           </label>
           <input
             type="email"
-            className="form-control"
+            className="form-control contact-form-control"
             id="exampleInputEmail1"
             name="email"
           />
@@ -70,7 +70,7 @@ const ContactUsForm = () => {
           <label className="form-label contact-text-color form-font">
             Message*
           </label>
-          <textarea name="message" className="form-control message"></textarea>
+          <textarea name="message" className="form-control contact-form-control message"></textarea>
         </div>
         <div className="mb-3 d-flex">
           <div className="d-flex align-items-center"> 
