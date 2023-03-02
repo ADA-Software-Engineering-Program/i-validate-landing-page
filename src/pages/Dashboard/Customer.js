@@ -58,7 +58,7 @@ function Customer() {
         </div>
         <div className='researchQuestion'>
             <h6 className='fw-bolder'>RECENT CONTACTS</h6>
-            <div>
+            <div className='w-100 justify-content-between'>
                 {customers.map((item)=> (
                     <Customercontact  key={item.id} title={item.title} link={item.link}/>
                 ))}
