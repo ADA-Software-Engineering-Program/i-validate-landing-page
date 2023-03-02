@@ -55,7 +55,7 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex login-container">
+    <div className="d-md-flex login-container">
       <Container className="form-side my-5">
         <Row className="mt-4 d-flex align-items-center justify-content-center">
           <Col md={12} lg={9} xs={12}>
@@ -69,7 +69,7 @@ const Login = () => {
               </div>
               <div>
                 <button className="login-google h50 d-flex align-items-center  justify-content-center"
-                onClick={onGoogleSubmitHandler}
+                onClick={ onGoogleSubmitHandler}
                 >
                   <FcGoogle />
                   <span>Sign in with Google</span>
