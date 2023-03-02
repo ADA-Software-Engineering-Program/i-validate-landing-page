@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom';
 
 
 
+
+
+
 const Hero = () => {
     
   return (
@@ -40,3 +43,17 @@ const Hero = () => {
 }
 
 export default Hero
+
+// Enbedded code for the chatbot
+  window.watsonAssistantChatOptions = {
+    integrationID: "6bea3e79-fec6-4c20-9b87-607a0076db49", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "76278e82-f06e-436a-97df-d58a8bd2f505", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+
