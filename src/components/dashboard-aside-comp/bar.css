@@ -1,0 +1,52 @@
+
+.bar {
+    fill: #FFCC00;
+  }
+  .bar:last-of-type {
+    fill: #86868a;
+  }
+  .bar:first-of-type {
+    fill: #292988;
+  }
+  .axis {
+    font: 10px sans-serif;
+    margin: 80px;
+  }
+  
+  .x.axis {
+    margin-left: 20px;
+  }
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  
+  .x.axis path {
+    display: none;
+  }
+  .y.axis {
+    margin: 50px;
+  }
+  .feed-option {
+    gap: 25px;
+  }
+  .gap-15 {
+    gap: 15px;
+  }
+  .feed-circle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+  .feed-blue {
+    background-color: #292988;
+  }
+  .feed-yellow {
+    background-color: #FFCC00;
+  }
+  .feed-gray {
+    background-color: #86868a;
+  }
+  
