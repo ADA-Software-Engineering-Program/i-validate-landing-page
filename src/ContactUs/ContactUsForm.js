@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import reCaptcha from '../Form/recaptcha.png'
 import "./contactUs.css";
 
 const ContactUsForm = () => {
 
-    function handleSubmit(event) {
-        event.preventDefault();
-      }
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        'service_lhgk9kl', 
+        'template_bamadl4', 
+        form.current, 
+        'CqHO2lxC5bQBMbgiv'
+        )
+
+      .then((result) => {
+          console.log(result.text);
+          alert("message sent")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
     
 
   return (
-      <form className="form-box">
+      <form className="form-box" ref={form} onSubmit={sendEmail}>
         <div className="radioResp">
             <label className="form-label contact-text-color form-font">
                 Would  you like to be featured on i-validate?
@@ -37,7 +54,7 @@ const ContactUsForm = () => {
               type="text"
               className="form-control contact-form-control"
               placeholder="First Name"
-              name="firstName"
+              name="first_name"
             />
           </div>
           <div className="form-lastName">
@@ -45,7 +62,7 @@ const ContactUsForm = () => {
               type="text"
               className="form-control contact-form-control"
               placeholder="Last Name"
-              name="lastName"
+              name="last_name"
             />
           </div>
         </div>
@@ -53,7 +70,7 @@ const ContactUsForm = () => {
           <label className="form-label contact-text-color form-font">
             Your Comapany/Organization
           </label>
-          <input type="text" className="form-control contact-form-control" name="yourCompany" />
+          <input type="text" className="form-control contact-form-control" name="user_company" />
         </div>
         <div className="mb-3">
           <label className="form-label contact-text-color form-font">
@@ -63,7 +80,7 @@ const ContactUsForm = () => {
             type="email"
             className="form-control contact-form-control"
             id="exampleInputEmail1"
-            name="email"
+            name="user_email"
           />
         </div>
         <div className="mb-3">
@@ -84,7 +101,7 @@ const ContactUsForm = () => {
           </div>
         </div>
         <div className="">
-          <button className="btn submit-btn rounded-none contact-bg-color outline-none border-none text-white form-font" onClick={handleSubmit}>
+          <button className="btn submit-btn rounded-none contact-bg-color outline-none border-none text-white form-font" type="submit" value="Send">
             Submit
           </button>
         </div>
