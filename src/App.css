@@ -16,31 +16,7 @@
   color: #61dafb;
 }
 
-.bg-circle{
-  position: fixed;
-  height: 60vh;
-  width: 70vw;
-  border-radius: 100%;
-
-}
-.bg-top {
-  top: -12%;
-  left: -28%;
-  background:rgba(41, 41, 136, 0.9);
-  filter: blur(150px);
-  z-index: 1;
-}
-
 .rightCol{
-  /* margin-left: 2px; */
-  /* padding: 6rem 3rem; */
   z-index: 2;
-}
-.bg-down {
-  bottom: -20%;
-  right: -18%;
-  background: rgba(255, 204, 0, 0.9);
-  filter: blur(150px);
-
 }
 

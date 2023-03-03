@@ -7,29 +7,11 @@ import { BsPatchCheckFill } from 'react-icons/bs';
 import { MdAddCircle } from 'react-icons/md';
 import Customer from './Customer';
 import Radiobtn from './Radiobtn';
-// import { signOut } from 'firebase/auth';
-// import auth from '../config/firebase/auth';
-// import { useNavigate } from 'react-router-dom';
-// import { toast } from 'react-toastify';
+
 
 
 function Dashboard() {
-  // import { getAuth, signOut } from "firebase/auth";
-
-  // const navigate = useNavigate();
-
-  // const logOut = () => {
-  //   signOut(auth)
-  //     .then(() => {
-  //       // Sign-out successful.
-  //       toast.success('Logout is successful');
-  //       navigate('/Home');
-  //     })
-  //     .catch((error) => {
-  //       // An error happened.
-  //       toast.error('Logout failed');
-  //     });
-  // };
+  
 
 
   return (
@@ -40,7 +22,6 @@ function Dashboard() {
                 <div className='d-flex justify-content-between'>
                     <Link className='my-auto text-decoration-none text-dark'
                     to="/"
-                    // onClick={logOut}
                     >Log Out</Link>
                     <div>
                       <HiUserCircle className='hiUser'/>

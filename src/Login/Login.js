@@ -20,8 +20,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
-  // const [passwordType, setPasswordType] = useState("password");
   
   const togglePassword = () => {
     setShowPassword(!showPassword);

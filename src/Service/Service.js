@@ -1,5 +1,4 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
+
 import './Service.css';
 import { useState } from 'react';
 
@@ -44,7 +43,6 @@ const Service = () => {
       <h2 className="text-white mb-5 fw-bold"> Service </h2>
       <div className="row">
         {List.map((item) => {
-          // const { title, img, content } = item;
 
           return <Serve {...item} key={item.id} />;
         })}

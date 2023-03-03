@@ -2,11 +2,6 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-/* .navbar-main {
-  height: 8rem;
-  background-color: transparent;
-} */
-
 .navbar-box {
   height: 100px;
 }
@@ -40,11 +35,6 @@ body {
     padding: 0.6rem 1rem;
 }
 
-/* .active {
-    background-color: rgba(41, 41, 136, 1);
-    color: #fff !important;
-    border-radius: 4px;
-} */
 
 /* Footer */
 .footer-landing {
@@ -55,7 +45,6 @@ body {
 
 .headerLogo {
   width: 8rem;
-  /* height: 3.5rem; */
 }
 
 .ulchange {
