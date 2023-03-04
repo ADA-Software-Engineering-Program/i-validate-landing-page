@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Login from '../src/Login/Login';
-// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Signup from './signup/Signup';
@@ -19,18 +18,17 @@ import Response from './Dashboard-aside/Response';
 function App() {
   return (
     <>
-      {/* <ToastContainer/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/dashboard" element={<Dashboard/>}/>  
-        <Route path="/Analytic" element={<Analytic />} />
+        <Route path="/analytic" element={<Analytic />} />
         <Route path="/Reset" element={<Reset />} />
-        <Route path='/AddContact' element={<AddContact />} />
-        <Route path='/Feedback' element={<Feedback />} />
+        <Route path='/addContact' element={<AddContact />} />
+        <Route path='/feedback' element={<Feedback />} />
         <Route path='/Response' element={<Response />} />
 
       </Routes>
