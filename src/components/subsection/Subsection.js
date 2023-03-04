@@ -23,9 +23,9 @@ function Subsection() {
 const Menu = () => {
   return (
     <div className='subsection my-md-5'>
-      <div className="background h-50">
-        <Video />
-      </div>
+        <div className='background h-25'>
+          <Video />
+        </div>
       <div className='row pattern'>
       <div className="col-lg-6" >
           <h1 id="pattern">

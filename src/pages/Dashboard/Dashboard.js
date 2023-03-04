@@ -6,7 +6,8 @@ import Dlogo from '../../images/i-validate-logo-optimiz.jpg';
 import { BsPatchCheckFill } from 'react-icons/bs';
 import { MdAddCircle } from 'react-icons/md';
 import Customer from './Customer';
-import Radiobtn from './Radiobtn';
+import Ideagenerator from './Ideagenerator';
+
 
 
 
@@ -34,49 +35,15 @@ function Dashboard() {
                   <span className='titleSpan'>Validate</span> your ideas before building
                 </h1>
             </section>
-            <form className='my-4 dSection'>
+            <div className='my-4 dSection'>
               <div className='overHead'>
                 <h2 className='fw-bolder ms-4 pt-2'>
                   1. Idea
                 </h2>
                 <span className='ms-4'>Kindly answer the following questions:</span>
               </div>
-              <div className='d-flex ideaSection'>
-                <BsPatchCheckFill className='dIcons'/>
-                <div className='dQuestion' >
-                  <h6 className='fw-bolder'>What is the problem you want to solve?</h6>
-                  <span>Be as specific as you can without mentioning any of the solutions. and convey the viewpoint of the user</span><br/>
-                  <input type={Text} className="dInput"/>
-                </div>
-              </div>
-              <div className='d-flex ideaSection'>
-                <BsPatchCheckFill className='dIcons'/>
-                <div className='dQuestion'>
-                  <h6 className='fw-bolder'>What is your solution?</h6>
-                  <span>Make use of proper English in writing your proposed solution and focus on the solution instead of the features.</span><br/>
-                  <input type={Text} className="dInput"/>
-                </div>
-              </div>
-              <div className='d-flex ideaSection'>
-                <BsPatchCheckFill className='dIcons'/>
-                <div className='dQuestion'>
-                  <h6 className='fw-bolder'>What is your unfair Advantage?</h6>
-                  <span>Ensure you state the major reason .</span><br/>
-                  <input type={Text} className="dInput"/>
-                </div>
-              </div>
-              <div className='d-flex ideaSection'>
-                <BsPatchCheckFill className='dIcons'/>
-                <div className='dQuestion'>
-                  <h6 className='fw-bolder'>Who are you target audience?</h6>
-                  <span>who are the individuals you are having in mind will creating your idea</span><br/>
-                  < Radiobtn/>
-                </div>
-              </div>
-              <button className='btn btn-lg findBtn iBtn'>
-                   Submit Idea
-                </button>
-            </form>
+              <Ideagenerator/>
+            </div>
             <article className='my-4 dSection'>
               <div className='overHead'>
                 <h2 className='fw-bolder ms-4 pt-2'>
