@@ -78,7 +78,7 @@ function Dashboard() {
                   <li></li>
                 </div>
               </div>
-              <div className='d-inline-flex border p-1 newBtn' >
+              <div className='d-inline-flex border p-1 mb-4 newBtn' >
                 <MdAddCircle className='dPlus'/>
                 <p className='my-auto'>NEW COMPETITORS</p>
               </div>

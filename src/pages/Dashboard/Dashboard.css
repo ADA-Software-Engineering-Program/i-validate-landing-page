@@ -22,7 +22,6 @@
 }
 
 .dSection {
-    padding-bottom: 2rem;
     box-shadow: .4rem .4rem .5rem rgba(37, 37, 217, 0.09), -.4rem -.4rem .5rem rgba(37, 37, 217, 0.09);
 }
 
@@ -93,6 +92,7 @@
 .iBtn {
     margin-left: 1rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .dRadio {
@@ -145,11 +145,6 @@
     .dIcons1{
         margin-top: 1rem;
     }
-
-    .dSection {
-        padding-bottom: 2rem;
-        box-shadow: .4rem .4rem .5rem rgba(37, 37, 217, 0.09), -.4rem -.4rem .5rem rgba(37, 37, 217, 0.09);
-    }
     
     .custBtn {
         font-size: .7rem;
@@ -188,7 +183,7 @@
     }
     
     .ideaSection {
-        margin-top: 1rem;
+        padding-top: 1rem;
         padding-left: 2rem;
     }
     
