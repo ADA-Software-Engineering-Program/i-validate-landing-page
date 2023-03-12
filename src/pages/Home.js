@@ -19,7 +19,7 @@ const Hero = () => {
       <section className='row hero'>
         <article className='col-lg-6 heroDetail'>
           <h1 className='title'>Bring your <span className='titleSpan'>refined</span> innovative ideas to market.</h1>
-          <p className='my-4'>
+          <p className='my-4 heroText'>
           I-validate provide a screening process for new business ideas, to answer a series of questions to determine if their idea has potential.
           </p>
         

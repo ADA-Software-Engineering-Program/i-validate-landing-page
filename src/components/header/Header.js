@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import { Nav } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 
 const Header = () => {
 
@@ -15,10 +15,6 @@ const Header = () => {
 
    //destructuring pathname from location
    const { pathname } = location;
- 
-   //Javascript split method to get the name of the path in array
-   const splitLocation = pathname.split("/");
-
 
   return (
     <Navbar expand="lg"  className="navbar-main">
@@ -29,11 +25,11 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto nav-gap">
-            <Nav.Link href={"/"}  className={splitLocation[1] === "" ? "active" : ""}>Home</Nav.Link>
-            <Nav.Link href={"./AboutUs"} className={splitLocation[1] === "AboutUs" ? "active" : ""}>About Us</Nav.Link>
-            <Nav.Link href={"./ContactUs"} className={splitLocation[1] === "ContactUs" ? "active" : ""}>Contact Us</Nav.Link>
-            <Nav.Link href={"./Analytic"} className={splitLocation[1] === "Analytic" ? "active" : ""}>Analytics</Nav.Link>
-            <Nav.Link href={"./Login"} className={splitLocation[1] === "Login" ? "active" : ""}>Log In</Nav.Link>
+            <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
+            <NavLink to="/AboutUs" className="nav-link" activeClassName="active">About Us</NavLink>
+            <NavLink to="/ContactUs" className="nav-link" activeClassName="active">Contact Us</NavLink>
+            <NavLink to="/Analytic" className="nav-link" activeClassName="active">Analytics</NavLink>
+            <NavLink to="/Login" className="nav-link" activeClassName="active">Log In</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

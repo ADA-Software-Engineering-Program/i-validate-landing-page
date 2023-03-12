@@ -38,8 +38,8 @@ function Testimonial() {
                     <Testifycard key={item.id} profilePic={item.profilePic} title={item.title} detail={item.detail} />
                     ))}
         </div>
-        <div className='col-lg-6'>
-            <div>
+        <div className='col-lg-6 '>
+            <div className='mt-lg-0 mt-4'>
                 <h5 className='fw-bolder mt-md-0 mt-2'>It was a great Experience!</h5>
                 <div className='d-flex star'>
                     < AiFillStar/>
