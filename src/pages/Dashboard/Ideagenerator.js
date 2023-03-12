@@ -12,10 +12,18 @@ const Ideagenerator =() => {
     const setFeedback = useFeedbackStore((state)=>state.setFeedback);
     const [features, setFeatures] = useState('');
     const [closing_feedback, setClosingFeedback] = useState('');
+   
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
+
+        // Check if all input fields are filled out
+        if (!idea || !features || !closing_feedback) {
+            alert('Please fill out all input fields');
+            return;
+        }
+        
         // Fetch idea from API based on user input
         const response = await fetch(`https://res.cloudinary.com/dahn8uiyc/raw/upload/v1677920144/ideaGenerator_foppix.json`);
     
@@ -29,6 +37,9 @@ const Ideagenerator =() => {
           console.log('Error fetching idea from API');
         }
       };
+
+
+      
 
   return (
     <div className='dSection'>
