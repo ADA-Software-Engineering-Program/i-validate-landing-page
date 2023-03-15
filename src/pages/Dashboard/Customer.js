@@ -63,13 +63,13 @@ function Customer() {
                     <Customercontact  key={item.id} title={item.title} link={item.link}/>
                 ))}
             </div>
-            <div className='d-inline-flex'>
+            <div className='d-inline-flex mb-4'>
                 <button className='custBtn p-1'>New Contact</button>
                 <button className='d-flex p-1 mx-3 custBtn'>
                     <MdLogout className='mdLog'/>
                     <span className='mt-1 ms-2'>Import CSV</span>
                 </button>
-                <button className='custBtn findBtn p-1'>Find People</button>
+                <button className='custBtn findBtn p-1 '>Find People</button>
             </div>
         </div>
               
