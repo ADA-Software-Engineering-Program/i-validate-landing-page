@@ -18,9 +18,11 @@ body {
 }
 
 
+
 .nav-gap {
-  width: 61%;
+  width: 50%;
   justify-content: space-between;
+  margin-left: 43.5%;
 }
 .nav-link {
   font-weight: 400;
@@ -29,11 +31,12 @@ body {
   color: #252525;
 }
 
-.nav-link.active {
+.active-link {
     background: #292988;
     color: white !important;
     border-radius: 5px;
     padding: 0.6rem 1rem;
+    text-decoration: none;
 }
 
 
@@ -54,7 +57,8 @@ body {
 
 @media (max-width: 1025px) {
     .nav-gap {
-        width: 60%;
+        width: 50%;
+        margin-left: 40%;
       }
 }
 

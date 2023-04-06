@@ -1,24 +1,32 @@
 import React from "react";
 import './headerFooter.css';
 import Logo from '../../images/i-validate-logo-optimiz.jpg';
-
 import Container from 'react-bootstrap/Container';
-import { Nav } from "react-bootstrap";
+import { Nav, NavItem } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from "react-router-dom";
 
-import { useLocation } from "react-router-dom";
 
-const Header = () => {
+const NavLinks = [
+  {
+    title: "About Us",
+    href: "/aboutUs"
+  },
+  {
+    title: "Contact Us",
+    href: "/contactUs"
+  },
+  {
+    title: "Analytics",
+    href: "/analytic"
+  },
+  {
+    title: "Login",
+    href: "/login"
+  },
+]
 
-   //assigning location variable
-   const location = useLocation();
-
-   //destructuring pathname from location
-   const { pathname } = location;
- 
-   //Javascript split method to get the name of the path in array
-   const splitLocation = pathname.split("/");
-
+function Header() {
 
   return (
     <Navbar expand="lg"  className="navbar-main">
@@ -28,12 +36,21 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto nav-gap">
-            <Nav.Link href={"/"}  className={splitLocation[1] === "" ? "active" : ""}>Home</Nav.Link>
-            <Nav.Link href={"./AboutUs"} className={splitLocation[1] === "AboutUs" ? "active" : ""}>About Us</Nav.Link>
-            <Nav.Link href={"./ContactUs"} className={splitLocation[1] === "ContactUs" ? "active" : ""}>Contact Us</Nav.Link>
-            <Nav.Link href={"./Analytic"} className={splitLocation[1] === "Analytic" ? "active" : ""}>Analytics</Nav.Link>
-            <Nav.Link href={"./Login"} className={splitLocation[1] === "Login" ? "active" : ""}>Log In</Nav.Link>
+          <Nav className="nav-gap">
+            {NavLinks.map((link) =>(
+              <NavItem key={link.title}>
+                <NavLink
+                to={link.href}
+                className={({
+                  isActive
+                }) => [
+                  isActive ? "active-link" : "nav-link",
+                ].join(" ")}
+                >
+                  {link.title}
+                </NavLink>
+              </NavItem>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>

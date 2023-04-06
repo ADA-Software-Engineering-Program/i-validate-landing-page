@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import Plancard from '../components/Plancard';
-import { Modal } from 'react-bootstrap';
-import { Configuration, OpenAIApi } from 'openai';
-// require('dotenv').config();
+import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog";
+import "@reach/dialog/styles.css";
 
-const Plan = () => {
+
+
+function Plan() {
   const [plandetail] = useState([
     {
       id: 1,
@@ -15,97 +16,112 @@ const Plan = () => {
     },
   ]);
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  const [showDialog, setShowDialog] = React.useState(false);
+  const open = () => setShowDialog(true);
+  const close = () => setShowDialog(false);
   const [idea, setIdea] = useState('');
   const [feedback, setFeedback] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const generate = async (e) => {
+  const Fallback = () => <div className='fallback'>This will take a while. Hold on</div>
+  
+
+  async function generate(e) {
     e.preventDefault();
+
+    console.log('Generating feedback from OpenAI');
 
     if (!idea) {
       alert('Please fill out all input fields');
       return;
     }
+    setLoading(true);
 
-    console.log('Generating feedback from OpenAI');
+    try {
+      const response = await fetch('https://i-validate-api.onrender.com/generate', {
+        mode: 'cors',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ idea }),
+      });
 
-    const configuration = new Configuration({
-      apiKey: "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",
-    });
-    const openai = new OpenAIApi(configuration);
-
-    const response = await openai.createCompletion({
-      model: 'text-davinci-003',
-      prompt: 'What do you think about this?' + idea,
-      temperature: 0.6,
-      max_tokens: 150,
-      top_p: 1,
-      frequency_penalty: 1,
-      presence_penalty: 1,
-    });
-    setFeedback(response.data.choices[0].text);
-
-    // console.log(response.data.choices[0].text);
-  };
+      const data = await response.json();
+      console.log(data);
+      setFeedback(data);
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred while generating feedback.');
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <section className="row numberSection">
       <article className="col-lg-6 px-md-5 planDetail">
         {plandetail.map((item) => {
-          return (
-            <Plancard
-              key={item.id}
-              heading={item.heading}
-              description={item.description}
-            />
-          );
+          return <Plancard key={item.id} heading={item.heading} description={item.description} />;
         })}
         <div className="d-inline-flex">
           <div className="circle ">
             <BsArrowRightShort className="w-75 h-75 mx-1 my-1" />
           </div>
-          <p className="mt-2 ms-2">Try it out if few clicks</p>
+          <p className="mt-2 ms-2">Try it out with a few clicks</p>
         </div>
       </article>
       <div className="col-lg-6 px-md-5">
         <form onSubmit={generate} className="planForm">
-          <input
-            type="text"
-            placeholder="Type idea here"
-            className="planInput"
-            onChange={(e) => setIdea(e.target.value)}
-          />
+          <input type="text" placeholder="Type idea here" className="planInput" value={idea} onChange={(e) => setIdea(e.target.value)} />
           <br />
-          <input
-            type="text"
-            placeholder="Choose sector"
-            className="planInput"
-          />
+          <input type="text" placeholder="Choose sector" className="planInput" />
           <br />
-          <div>
-            <button
-              type="submit"
-              onClick={handleShow}
-              className="btn heroBtn heroBtn2"
-            >
-              Generate
-            </button>
-            {feedback !== '' && (
-              <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  {/* <Modal.Title>Modal heading</Modal.Title> */}
-                </Modal.Header>
-                <Modal.Body>{feedback}</Modal.Body>
-              </Modal>
-            )}
-          </div>
+          <button type="submit" className="btn heroBtn heroBtn2"  onClick={open}>Generate</button>
         </form>
+        <Suspense fallback={<Fallback/>}>
+          {loading && <Fallback/>}
+          {feedback.data && !loading && (
+            <Dialog isOpen={showDialog}>
+              <DialogOverlay
+              style={{ background: "hsla(0, 0%, 0%, .5)" , zIndex: "1055"}}
+              onDismiss={close}
+              >
+                <DialogContent
+                  style={{ boxShadow: "0px 10px 50px hsla(0, 0%, 0%, 0.33)", width: "80%" }}
+                >
+                  <div className='d-flex justify-content-between align-items-center mb-3'>
+                    <h4>Feedback</h4>
+                    <button className='closeBtn' onClick={close}>
+                      <span aria-hidden>X</span>
+                    </button>
+                  </div>
+                  <p>
+                    {feedback.data}
+                  </p>
+                </DialogContent>
+            </DialogOverlay>
+          </Dialog>
+        )}
+        </Suspense>
       </div>
+      
     </section>
+
   );
 };
+export default Plan
 
-export default Plan;
+
+
+
+
+
+
+
+
+
+
+
+
+

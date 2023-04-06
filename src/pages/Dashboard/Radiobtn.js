@@ -7,7 +7,7 @@ function Radiobtn() {
         setAudience(event.target.value);
       };
   return (
-    <div className='row py-3'>
+    <div className='row radioBtns'>
         <div className='col-md-6'>
             <label>
             <input type='radio' name='audience' value='children' checked={audience === 'children'} className="dRadio" onChange={handleAudienceChange} />

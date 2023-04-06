@@ -45,10 +45,8 @@ code {
 }
 
 .heroBtn:hover {
-  background: #fff !important;
+  background-color:rgba(255, 204, 0, 1) !important ;
   color: rgba(41, 41, 136, 1);
-  font-size: 1.5rem;
-  padding-top: 0rem;
 }
 
 .heroLeft {
@@ -78,7 +76,7 @@ code {
 }
 
 .heroBtn2:hover {
-  background-color: rgb(32, 175, 32) !important;
+  background-color: rgba(41, 41, 136, 1) !important;
   color: rgba(255, 204, 0, 1);
 }
 
@@ -178,6 +176,29 @@ code {
 .proDetail {
   font-size: .8rem;
 }
+
+.fallback {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  justify-content: center; 
+  align-items: center;
+  background-color: rgba(255, 204, 0, .5);
+  z-index: 10;
+}
+
+.closeBtn {
+  font-size: 1rem;
+  background-color: transparent;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
 
 
 
