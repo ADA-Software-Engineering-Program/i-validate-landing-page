@@ -17,7 +17,7 @@ const {data}  = feedbackData;
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h3>Feedback</h3>
         <div className="d-flex justify-content-between align-items-center">
-          <Link to="/Login" className="text-black d-block me-2">
+          <Link to="/" className="text-black d-block me-2">
             Log out
           </Link>
           <BsPersonCircle className="fs-4" />

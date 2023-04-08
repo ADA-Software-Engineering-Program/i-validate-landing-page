@@ -187,10 +187,17 @@ code {
   font-weight: 500;
   justify-content: center; 
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   color: rgba(41, 41, 136, 1);
   background-color: rgba(255, 204, 0, .5);
   z-index: 10;
+}
+
+.fallback p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .closeBtn {

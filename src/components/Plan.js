@@ -23,7 +23,7 @@ function Plan() {
   const [feedback, setFeedback] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const Fallback = () => <div className='fallback'>This will take a while. Hold on</div>
+  const Fallback = () => <div className='fallback'><p>This will take a while. Hold on</p></div>
   
 
   async function generate(e) {
