@@ -1,61 +1,123 @@
 import React from "react";
-import './headerFooter.css';
-import Logo from '../../images/i-validate-logo-optimiz.jpg';
-import Container from 'react-bootstrap/Container';
-import { Nav, NavItem } from "react-bootstrap";
-import Navbar from 'react-bootstrap/Navbar';
+import "./headerFooter.css";
+import Logo from "../../images/i-validate-logo-optimiz.jpg";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
-
 
 const NavLinks = [
   {
     title: "About Us",
-    href: "/aboutUs"
+    href: "/aboutUs",
   },
   {
     title: "Contact Us",
-    href: "/contactUs"
+    href: "/contactUs",
   },
   {
     title: "Analytics",
-    href: "/analytic"
+    href: "/analytic",
   },
   {
     title: "Login",
-    href: "/login"
+    href: "/login",
   },
-]
+];
 
 function Header() {
-
   return (
-    <Navbar expand="lg"  className="navbar-main">
+    <Navbar expand="lg" className="navbar-main">
       <Container>
-        <Navbar.Brand href="/"> 
-          <img src={Logo} alt="logo" className="headerLogo"/>
+        <Navbar.Brand href="/">
+          <img src={Logo} alt="logo" className="headerLogo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-gap">
-            {NavLinks.map((link) =>(
-              <NavItem key={link.title}>
-                <NavLink
+            {NavLinks.map((link) => (
+              <Nav.Link
+                key={link.title}
+                as={NavLink}
                 to={link.href}
-                className={({
-                  isActive
-                }) => [
-                  isActive ? "active-link" : "nav-link",
-                ].join(" ")}
-                >
-                  {link.title}
-                </NavLink>
-              </NavItem>
+                exact="true"
+                className="nav-link"
+                activeclassname="active-link"
+              >
+                {link.title}
+              </Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
+}
 
 export default Header;
+
+
+
+
+
+// import React from "react";
+// import './headerFooter.css';
+// import Logo from '../../images/i-validate-logo-optimiz.jpg';
+// import Container from 'react-bootstrap/Container';
+// import { Nav, NavItem } from "react-bootstrap";
+// import Navbar from 'react-bootstrap/Navbar';
+// import { NavLink } from "react-router-dom";
+
+
+// const NavLinks = [
+//   {
+//     title: "About Us",
+//     href: "/aboutUs"
+//   },
+//   {
+//     title: "Contact Us",
+//     href: "/contactUs"
+//   },
+//   {
+//     title: "Analytics",
+//     href: "/analytic"
+//   },
+//   {
+//     title: "Login",
+//     href: "/login"
+//   },
+// ]
+
+// function Header() {
+
+//   return (
+//     <Navbar expand="lg"  className="navbar-main">
+//       <Container>
+//         <Navbar.Brand href="/"> 
+//           <img src={Logo} alt="logo" className="headerLogo"/>
+//         </Navbar.Brand>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse id="basic-navbar-nav">
+//           <Nav className="nav-gap">
+//             {NavLinks.map((link) =>(
+//               <NavItem key={link.title}>
+//                 <NavLink
+//                 to={link.href}
+//                 className={({
+//                   isActive
+//                 }) => [
+//                   isActive ? "active-link" : "nav-link",
+//                 ].join(" ")}
+//                 >
+//                   {link.title}
+//                 </NavLink>
+//               </NavItem>
+//             ))}
+//           </Nav>
+//         </Navbar.Collapse>
+//       </Container>
+//     </Navbar>
+//   );
+// };
+
+// export default Header;

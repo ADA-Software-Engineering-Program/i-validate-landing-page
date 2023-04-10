@@ -96,6 +96,7 @@ const Login = () => {
                           type={showPassword ? "text" : "password"}
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
+                          autoComplete="current-password"
                         />
                         <div>
                           <button className="login-icon" onClick={togglePassword}>
