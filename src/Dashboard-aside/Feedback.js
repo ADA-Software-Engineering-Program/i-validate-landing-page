@@ -10,7 +10,7 @@ const Feedback = () => {
   const feedbackData = useFeedbackStore((state) => state.feedback);
 
   
-const {text}  = feedbackData;
+  const {data}  = feedbackData;
 
   return (
     <div className="container my-5">
@@ -25,7 +25,7 @@ const {text}  = feedbackData;
       </div>
 
       <div className="feedback-text">
-        <p>{text}</p>
+        <p>{data}</p>
       </div>
       <div>
         <BarCC />

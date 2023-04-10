@@ -6,6 +6,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@ibm-watson/assistant-web-chat-react": "^1.0.3",
+    "@reach/dialog": "^0.18.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

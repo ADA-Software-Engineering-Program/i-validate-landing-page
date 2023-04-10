@@ -1,5 +1,3 @@
-
-
 .hiUser {
     width: 30px;
     height: auto;
@@ -45,9 +43,16 @@
 }
 
 .dIcons{
-    margin-bottom: 6rem;
-    width: 2rem;
+    margin-bottom: -7rem;
+    width: 1.8rem;
     height: auto;
+    color: rgba(41, 41, 136, 1);
+}
+
+.d-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 1.2rem;
     color: rgba(41, 41, 136, 1);
 }
 
@@ -67,9 +72,9 @@
 }
 
 .dInput {
-    width: 20rem;
+    width: 15rem;
     height: 5rem;
-    margin-top: .2rem;
+    margin-top: -2rem;
 }
 
 .ideaSection {
@@ -86,7 +91,12 @@
 }
 
 .dQuestion {
-    padding-top: 1.3rem;
+    padding-top: 1.2rem;
+}
+
+.dQuestion > p {
+    margin-top: -.4rem;
+    font-size: .8rem;
 }
 
 .iBtn {
@@ -112,12 +122,12 @@
 }
 
 .custCard {
-    margin-top: 1rem;
     justify-items: space-between;
+    align-items: center;
 }
 
-.custLink {
-    margin: auto 1rem;
+.radioBtns {
+    margin-top: -2rem;
 }
 
 
@@ -138,12 +148,21 @@
     }
 
     .dIcons {
-        margin-top: 0rem;
+        width: 2rem;
+        height: 2rem;
+        margin-top: .8rem;
         margin-right: 1rem;
     }
 
     .dIcons1{
         margin-top: 1rem;
+    }
+
+    .d-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        color: rgba(41, 41, 136, 1);
     }
     
     .custBtn {
@@ -179,7 +198,7 @@
     .dInput {
         width: 20rem;
         height: 5rem;
-        margin-top: .5rem;
+        margin-top: -2rem;
     }
     
     .ideaSection {
@@ -195,9 +214,9 @@
         color: rgba(0, 0, 0, 1);
     }
     
-    .dQuestion {
+    /* .dQuestion {
         padding-top: 1.3rem;
-    }
+    } */
     
     .iBtn {
         margin-left: 4rem;
@@ -221,11 +240,8 @@
     }
     
     .custCard {
-        margin-top: 1rem;
-        justify-items: justif;
+        justify-content: space-between;
+        align-items: center;
     }
     
-    .custLink {
-        margin: auto 14rem;
-    }
 }
