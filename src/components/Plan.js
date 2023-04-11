@@ -1,8 +1,10 @@
 import React, { Suspense, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import Plancard from '../components/Plancard';
-import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog";
-import "@reach/dialog/styles.css";
+import { Dialog } from '@headlessui/react';
+import { RxCross2 } from 'react-icons/rx';
+
+
 
 
 const Plan = () => {
@@ -10,19 +12,16 @@ const Plan = () => {
     {
       id: 1,
       heading: 'Business Plan Generator',
-      description:
-        'We provide a step-by-step guide to create a business plan, including financial projections, marketing strategies, and a sales plan. This would help you to identify potential challenges and opportunities before investing significant resources.',
+      description: 'We provide a step-by-step guide to create a business plan, including financial projections, marketing strategies, and a sales plan. This would help you to identify potential challenges and opportunities before investing significant resources.',
     },
   ]);
 
   
-  
-  const [showDialog, setShowDialog] = React.useState(false);
-  const open = () => setShowDialog(true);
-  const close = () => setShowDialog(false);
   const [idea, setIdea] = useState('');
   const [feedback, setFeedback] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
 
 
   const Fallback = () => <div className='fallback'><p>This will take a while. Hold on</p></div>
@@ -52,6 +51,7 @@ const Plan = () => {
       const data = await response.json();
       console.log(data);
       setFeedback(data);
+      setIsOpen(true); // Open the dialog after receiving feedback
     } catch (error) {
       console.error(error);
       alert('An error occurred while generating feedback.');
@@ -97,7 +97,6 @@ const Plan = () => {
           <br />
           <button
             type="submit"
-            onClick={open}
             className="btn heroBtn heroBtn2"
           >
             Generate
@@ -105,27 +104,29 @@ const Plan = () => {
         </form>
         <Suspense fallback={<Fallback/>}>
           {loading && <Fallback/>}
-          {feedback.data && !loading && (
-            <Dialog isOpen={showDialog}>
-              <DialogOverlay
-              style={{ background: "hsla(0, 0%, 0%, .5)" , zIndex: "1055"}}
-              onDismiss={close}
+          {isOpen && feedback.data && !loading && (
+            
+              <Dialog 
+                open={isOpen}
+                style={{position: "fixed", left:"0", right:"0", top:"0", bottom:"0",  zIndex: "60", justifyContent:"center", alignItems:"center", minHeight:"100vh" }}
+                onClose={() => setIsOpen(false)}
               >
-                <DialogContent
-                  style={{ boxShadow: "0px 10px 50px hsla(0, 0%, 0%, 0.33)", width: "80%" }}
-                >
-                  <div className='d-flex justify-content-between align-items-center mb-3'>
-                    <h4>Feedback</h4>
-                    <button className='closeBtn' onClick={close}>
-                      <span aria-hidden>X</span>
-                    </button>
+                <div style={{position:"fixed", inset:"0", overflowY:"auto"}}>
+                  <div style={{display:"flex", justifyContent:"center", alignItems:"center", minHeight:"full", padding:"4px"}}>
+                    <Dialog.Panel
+                      className='mx-auto bg-white p-3  text-start align-items-center'
+                    >
+                      <div className='d-flex justify-content-around align-items-center'>
+                        <Dialog.Title as='h4' className='text-lg fw-semibold'>Feedback</Dialog.Title>
+                          <button onClick={() => setIsOpen(false)} className='bg-transparent p-1 border-0'>
+                            <RxCross2/>
+                          </button>
+                      </div>
+                      <p className='text-base p-2 overflow-auto'>{feedback.data}</p>
+                    </Dialog.Panel>
                   </div>
-                  <p>
-                    {feedback.data}
-                  </p>
-                </DialogContent>
-            </DialogOverlay>
-          </Dialog>
+                </div>
+              </Dialog>
         )}
         </Suspense>
       </div>

@@ -1,8 +1,7 @@
 import React from "react";
 import './headerFooter.css';
 import Logo from '../../images/i-validate-logo-optimiz.jpg';
-import Container from 'react-bootstrap/Container';
-import { Nav, NavItem } from "react-bootstrap";
+import { Container, Nav, NavItem } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom";
 
@@ -38,7 +37,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-gap">
             {NavLinks.map((link) =>(
-              <NavItem key={link.title}>
+              <NavItem key={link.title} className="nav-house">
                 <NavLink
                 to={link.href}
                 className={({

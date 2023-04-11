@@ -58,6 +58,13 @@ body {
         width: 50%;
         margin-left: 40%;
       }
+
+      .nav-house {
+        display: flex;
+        /* margin-left: .8rem; */
+        justify-content: center;
+        align-items: center;
+      }
 }
 
 @media (max-width: 768px) {
