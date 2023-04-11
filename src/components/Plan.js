@@ -1,54 +1,63 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import Plancard from '../components/Plancard';
-import { Modal } from 'react-bootstrap';
-import { Configuration, OpenAIApi } from 'openai';
-// require('dotenv').config();
+import { Dialog } from '@headlessui/react';
+import { RxCross2 } from 'react-icons/rx';
+
+
+
 
 const Plan = () => {
   const [plandetail] = useState([
     {
       id: 1,
       heading: 'Business Plan Generator',
-      description:
-        'We provide a step-by-step guide to create a business plan, including financial projections, marketing strategies, and a sales plan. This would help you to identify potential challenges and opportunities before investing significant resources.',
+      description: 'We provide a step-by-step guide to create a business plan, including financial projections, marketing strategies, and a sales plan. This would help you to identify potential challenges and opportunities before investing significant resources.',
     },
   ]);
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  
   const [idea, setIdea] = useState('');
   const [feedback, setFeedback] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const generate = async (e) => {
+
+
+  const Fallback = () => <div className='fallback'><p>This will take a while. Hold on</p></div>
+
+  async function generate(e) {
     e.preventDefault();
 
     if (!idea) {
       alert('Please fill out all input fields');
       return;
     }
+    setLoading(true);
 
     console.log('Generating feedback from OpenAI');
 
-    const configuration = new Configuration({
-      apiKey: "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",
-    });
-    const openai = new OpenAIApi(configuration);
+    
+    try {
+      const response = await fetch('https://i-validate-api.onrender.com/generate', {
+        mode: 'cors',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ idea }),
+      });
 
-    const response = await openai.createCompletion({
-      model: 'text-davinci-003',
-      prompt: 'What do you think about this?' + idea,
-      temperature: 0.6,
-      max_tokens: 150,
-      top_p: 1,
-      frequency_penalty: 1,
-      presence_penalty: 1,
-    });
-    setFeedback(response.data.choices[0].text);
-
-    // console.log(response.data.choices[0].text);
+      const data = await response.json();
+      console.log(data);
+      setFeedback(data);
+      setIsOpen(true); // Open the dialog after receiving feedback
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred while generating feedback.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -76,6 +85,7 @@ const Plan = () => {
             type="text"
             placeholder="Type idea here"
             className="planInput"
+            value={idea}
             onChange={(e) => setIdea(e.target.value)}
           />
           <br />
@@ -85,24 +95,40 @@ const Plan = () => {
             className="planInput"
           />
           <br />
-          <div>
-            <button
-              type="submit"
-              onClick={handleShow}
-              className="btn heroBtn heroBtn2"
-            >
-              Generate
-            </button>
-            {feedback !== '' && (
-              <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  {/* <Modal.Title>Modal heading</Modal.Title> */}
-                </Modal.Header>
-                <Modal.Body>{feedback}</Modal.Body>
-              </Modal>
-            )}
-          </div>
+          <button
+            type="submit"
+            className="btn heroBtn heroBtn2"
+          >
+            Generate
+          </button>
         </form>
+        <Suspense fallback={<Fallback/>}>
+          {loading && <Fallback/>}
+          {isOpen && feedback.data && !loading && (
+            
+              <Dialog 
+                open={isOpen}
+                style={{position: "fixed", left:"0", right:"0", top:"0", bottom:"0",  zIndex: "60", justifyContent:"center", alignItems:"center", minHeight:"100vh" }}
+                onClose={() => setIsOpen(false)}
+              >
+                <div style={{position:"fixed", inset:"0", overflowY:"auto"}}>
+                  <div style={{display:"flex", justifyContent:"center", alignItems:"center", minHeight:"full", padding:"4px"}}>
+                    <Dialog.Panel
+                      className='mx-auto bg-white p-3  text-start align-items-center'
+                    >
+                      <div className='d-flex justify-content-around align-items-center'>
+                        <Dialog.Title as='h4' className='text-lg fw-semibold'>Feedback</Dialog.Title>
+                          <button onClick={() => setIsOpen(false)} className='bg-transparent p-1 border-0'>
+                            <RxCross2/>
+                          </button>
+                      </div>
+                      <p className='text-base p-2 overflow-auto'>{feedback.data}</p>
+                    </Dialog.Panel>
+                  </div>
+                </div>
+              </Dialog>
+        )}
+        </Suspense>
       </div>
     </section>
   );

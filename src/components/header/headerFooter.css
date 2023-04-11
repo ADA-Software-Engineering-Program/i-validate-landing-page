@@ -17,23 +17,24 @@ body {
   gap: 10px;
 }
 
-
 .nav-gap {
-  width: 61%;
+  width: 50%;
   justify-content: space-between;
+  margin-left: 43.5%;
 }
 .nav-link {
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  /* line-height: 19px; */
   color: #252525;
 }
 
-.nav-link.active {
-    background: #292988;
-    color: white !important;
-    border-radius: 5px;
-    padding: 0.6rem 1rem;
+.active-link {
+  text-decoration: none;
+  background: #292988;
+  color: white !important;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
 }
 
 
@@ -54,7 +55,15 @@ body {
 
 @media (max-width: 1025px) {
     .nav-gap {
-        width: 60%;
+        width: 50%;
+        margin-left: 40%;
+      }
+
+      .nav-house {
+        display: flex;
+        /* margin-left: .8rem; */
+        justify-content: center;
+        align-items: center;
       }
 }
 
