@@ -4,9 +4,6 @@ import Plancard from '../components/Plancard';
 import { Dialog } from '@headlessui/react';
 import { RxCross2 } from 'react-icons/rx';
 
-
-
-
 function Plan() {
   const [plandetail] = useState([
     {
@@ -16,13 +13,10 @@ function Plan() {
     },
   ]);
 
-  
   const [idea, setIdea] = useState('');
   const [feedback, setFeedback] = useState('');
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-
 
   const Fallback = () => <div className='fallback'><p>This will take a while. Hold on</p></div>
 
@@ -39,7 +33,6 @@ function Plan() {
 
     console.log('Generating feedback from OpenAI');
 
-    
     try {
       const response = await fetch('https://i-validate-api.onrender.com/generate', {
         mode: 'cors',
