@@ -14,9 +14,6 @@ const Ideagenerator =() => {
     const [idea, setIdea] = useState('');
 
     const setFeedback = useFeedbackStore((state)=>state.setFeedback);
-    
-   
-
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -43,9 +40,6 @@ const Ideagenerator =() => {
 
 
     };
-
-
-      
 
   return (
     <div className='dSection'>

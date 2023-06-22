@@ -1,7 +1,7 @@
 // import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 
-export default function AppLayout({ children }) {
+function AppLayout({ children }) {
   return (
     <div>
         {/* <Header /> */}
@@ -10,3 +10,5 @@ export default function AppLayout({ children }) {
     </div>
   );
 }
+
+export default AppLayout

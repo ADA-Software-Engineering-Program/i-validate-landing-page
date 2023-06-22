@@ -97,6 +97,7 @@ export default function SignupForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 name="email"
                 className="ps-3"
+                autoComplete="username"
                 />
             </div>
             <div>
@@ -108,6 +109,7 @@ export default function SignupForm() {
                     value={password}
                     name="password"
                     className="ps-3"
+                    autoComplete="current-password"
                 />
                 <div className=" ">
                     <button onClick={togglePassword} className="signup-icon">

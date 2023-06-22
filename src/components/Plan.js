@@ -4,10 +4,7 @@ import Plancard from '../components/Plancard';
 import { Dialog } from '@headlessui/react';
 import { RxCross2 } from 'react-icons/rx';
 
-
-
-
-const Plan = () => {
+function Plan() {
   const [plandetail] = useState([
     {
       id: 1,
@@ -16,18 +13,17 @@ const Plan = () => {
     },
   ]);
 
-  
   const [idea, setIdea] = useState('');
   const [feedback, setFeedback] = useState('');
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-
-
   const Fallback = () => <div className='fallback'><p>This will take a while. Hold on</p></div>
 
   async function generate(e) {
     e.preventDefault();
+
+    console.log('Generating feedback from OpenAI');
 
     if (!idea) {
       alert('Please fill out all input fields');
@@ -37,7 +33,6 @@ const Plan = () => {
 
     console.log('Generating feedback from OpenAI');
 
-    
     try {
       const response = await fetch('https://i-validate-api.onrender.com/generate', {
         mode: 'cors',
@@ -64,19 +59,13 @@ const Plan = () => {
     <section className="row numberSection">
       <article className="col-lg-6 px-md-5 planDetail">
         {plandetail.map((item) => {
-          return (
-            <Plancard
-              key={item.id}
-              heading={item.heading}
-              description={item.description}
-            />
-          );
+          return <Plancard key={item.id} heading={item.heading} description={item.description} />;
         })}
         <div className="d-inline-flex">
           <div className="circle ">
             <BsArrowRightShort className="w-75 h-75 mx-1 my-1" />
           </div>
-          <p className="mt-2 ms-2">Try it out if few clicks</p>
+          <p className="mt-2 ms-2">Try it out with a few clicks</p>
         </div>
       </article>
       <div className="col-lg-6 px-md-5">
@@ -89,11 +78,7 @@ const Plan = () => {
             onChange={(e) => setIdea(e.target.value)}
           />
           <br />
-          <input
-            type="text"
-            placeholder="Choose sector"
-            className="planInput"
-          />
+          <input type="text" placeholder="Choose sector" className="planInput" />
           <br />
           <button
             type="submit"
@@ -130,8 +115,23 @@ const Plan = () => {
         )}
         </Suspense>
       </div>
+      
     </section>
+
   );
 };
+export default Plan
 
-export default Plan;
+
+
+
+
+
+
+
+
+
+
+
+
+
