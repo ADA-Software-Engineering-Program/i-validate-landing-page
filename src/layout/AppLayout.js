@@ -1,13 +1,13 @@
+// import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 
 function AppLayout({ children }) {
   return (
-    <main>
-       <div>
-        {children}
-      </div>
+    <div>
+        {/* <Header /> */}
+      <main>{children}</main>
       <Footer />
-    </main>
+    </div>
   );
 }
 

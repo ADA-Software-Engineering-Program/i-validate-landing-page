@@ -10,7 +10,7 @@ const Feedback = () => {
   const feedbackData = useFeedbackStore((state) => state.feedback);
 
   
-const {data}  = feedbackData;
+  const {data}  = feedbackData;
 
   return (
     <div className="container my-5">

@@ -17,8 +17,6 @@ body {
   gap: 10px;
 }
 
-
-
 .nav-gap {
   width: 50%;
   justify-content: space-between;
@@ -27,16 +25,16 @@ body {
 .nav-link {
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  /* line-height: 19px; */
   color: #252525;
 }
 
 .active-link {
-    background: #292988;
-    color: white !important;
-    border-radius: 5px;
-    padding: 0.6rem 1rem;
-    text-decoration: none;
+  text-decoration: none;
+  background: #292988;
+  color: white !important;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
 }
 
 
@@ -59,6 +57,13 @@ body {
     .nav-gap {
         width: 50%;
         margin-left: 40%;
+      }
+
+      .nav-house {
+        display: flex;
+        /* margin-left: .8rem; */
+        justify-content: center;
+        align-items: center;
       }
 }
 

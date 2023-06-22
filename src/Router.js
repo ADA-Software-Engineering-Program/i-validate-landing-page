@@ -1,13 +1,12 @@
 import React, { lazy } from "react";
 
-const Home = lazy(()=>import("./pages/Home"));
-const AboutUs = lazy(()=>import("./AboutUs/AboutUs"));
-const Analytic = lazy(()=>import("./Analytic/Analytic"));
-const ContactUs = lazy(()=>import("./ContactUs/ContactUs"));
-const AddContact = lazy(()=>import("./Dashboard-aside/AddContact"));
-// const Feedback = lazy(()=>import("./Dashboard-aside/Feedback.js"));
-const Login = lazy(()=>import("./Login/Login"));
-const Reset = lazy(()=>import("./reset/Reset"));
+const Home = lazy(()=>import("../../i-validate-landing-page/src/pages/Home.js"));
+const AboutUs = lazy(()=>import("../../i-validate-landing-page/src/AboutUs/AboutUs.js"));
+const Analytic = lazy(()=>import("../../i-validate-landing-page/src/Analytic/Analytic.js"));
+const ContactUs = lazy(()=>import("../../i-validate-landing-page/src/ContactUs/ContactUs.js"));
+const AddContact = lazy(()=>import("../../i-validate-landing-page/src/Dashboard-aside/AddContact.js"));
+const Login = lazy(()=>import("../../i-validate-landing-page/src/Login/Login.js"));
+const Reset = lazy(()=>import("../../i-validate-landing-page/src/reset/Reset.js"));
 
 
 
@@ -33,16 +32,12 @@ const AppRoutes = [
         path: "/login",
         element: <Login/>
     },
-    // {
-    //     path: "/feedback",
-    //     element: <Feedback/>
-    // },
     {
         path: "/reset",
         element: <Reset/>
     },
     {
-        path: "/addContanct",
+        path: "/addContact",
         element: <AddContact/>
     },
     {
@@ -50,4 +45,4 @@ const AppRoutes = [
         element: <div>Not Found</div>
     }
 ]
-export default AppRoutes
+export default AppRoutes;

@@ -5,6 +5,10 @@ import Radiobtn from './Radiobtn';
 import useFeedbackStore from '../../store/zustand/feedbackStore';
 
 
+
+
+
+
 const Ideagenerator =() => {
     const navigate = useNavigate();
     const [idea, setIdea] = useState('');
@@ -19,7 +23,7 @@ const Ideagenerator =() => {
             alert('Please fill out all input fields');
             return;
         }
-
+        
         const response = await fetch("https://i-validate-api.onrender.com/generate", {
             mode: "cors",
             method: "POST",
@@ -33,7 +37,8 @@ const Ideagenerator =() => {
         // console.log(data);
         setFeedback(data);
         navigate("/feedback");
-        
+
+
     };
 
   return (
@@ -44,7 +49,7 @@ const Ideagenerator =() => {
                 <div className='dQuestion' >
                     <h6 className='fw-bolder'>What is the problem you want to solve?</h6>
                     <p>Be as specific as you can without mentioning any of the solutions. and convey the viewpoint of the user</p><br/>
-                    <textarea 
+                    <textarea
                         type="text" 
                         className="dInput"
                         value={idea}
@@ -70,7 +75,7 @@ const Ideagenerator =() => {
                 <div className='dQuestion'>
                     <h6 className='fw-bolder'>What is your unfair Advantage?</h6>
                     <p>Ensure you state the major reason .</p><br/>
-                    <textarea
+                    <textarea 
                         type="text" 
                         className="dInput"
                         cols="60"
@@ -81,7 +86,7 @@ const Ideagenerator =() => {
                 <BsPatchCheckFill className='d-icon'/>
                 <div className='dQuestion'>
                     <h6 className='fw-bolder'>Who are you target audience?</h6>
-                    <p>Who are the individuals you are having in mind will creating your idea</p><br/>
+                    <p>who are the individuals you are having in mind will creating your idea</p><br/>
                     < Radiobtn/>
                 </div>
             </div>

@@ -45,7 +45,7 @@ code {
 }
 
 .heroBtn:hover {
-  background-color:rgba(255, 204, 0, 1) !important ;
+  background: rgba(255, 204, 0, 1) !important;
   color: rgba(41, 41, 136, 1);
 }
 
@@ -189,7 +189,7 @@ code {
   align-items: center;
   /* text-align: center; */
   color: rgba(41, 41, 136, 1);
-  background-color: rgba(255, 204, 0, .5);
+  background-color: rgba(255, 204, 0, 0.2);
   z-index: 10;
 }
 
